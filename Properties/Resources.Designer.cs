@@ -113,6 +113,26 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_correct_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-correct-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_correct_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-correct-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-48", resourceCulture);
@@ -356,6 +376,16 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_07_12_204713 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-07-12 204713", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_07_13_042410 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-07-13 042410", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

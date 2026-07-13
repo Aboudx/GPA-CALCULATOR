@@ -236,5 +236,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-reset-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-07-13 042410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-07-13 042544.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-correct-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-correct-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
