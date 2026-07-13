@@ -230,5 +230,11 @@
   <ItemGroup>
     <None Include="Resources\photo_2026-07-12_23-42-36.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calculator-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
