@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblCreditHours = new System.Windows.Forms.Label();
+            this.lblGrade = new System.Windows.Forms.Label();
             this.lblCourseName = new System.Windows.Forms.Label();
-            this.lbGrade = new System.Windows.Forms.Label();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddCourse = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblCreditHours = new System.Windows.Forms.Label();
+            this.CreditHours = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.lbCreditHours = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,14 +50,14 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.lbCreditHours);
-            this.guna2ShadowPanel1.Controls.Add(this.lbGrade);
+            this.guna2ShadowPanel1.Controls.Add(this.lblCreditHours);
+            this.guna2ShadowPanel1.Controls.Add(this.lblGrade);
             this.guna2ShadowPanel1.Controls.Add(this.lblCourseName);
             this.guna2ShadowPanel1.Controls.Add(this.guna2ShadowPanel2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
-            this.guna2ShadowPanel1.Controls.Add(this.btnAddCourse);
+            this.guna2ShadowPanel1.Controls.Add(this.btnDelete);
+            this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.Controls.Add(this.lblCreditHours);
+            this.guna2ShadowPanel1.Controls.Add(this.CreditHours);
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
@@ -71,6 +71,30 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(471, 89);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
+            // lblCreditHours
+            // 
+            this.lblCreditHours.AutoSize = true;
+            this.lblCreditHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.lblCreditHours.Font = new System.Drawing.Font("MV Boli", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
+            this.lblCreditHours.Location = new System.Drawing.Point(183, 44);
+            this.lblCreditHours.Name = "lblCreditHours";
+            this.lblCreditHours.Size = new System.Drawing.Size(23, 22);
+            this.lblCreditHours.TabIndex = 42;
+            this.lblCreditHours.Text = "0";
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.lblGrade.Font = new System.Drawing.Font("MV Boli", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.lblGrade.Location = new System.Drawing.Point(299, 44);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(28, 22);
+            this.lblGrade.TabIndex = 31;
+            this.lblGrade.Text = "  ";
+            // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
@@ -81,18 +105,6 @@
             this.lblCourseName.Size = new System.Drawing.Size(70, 25);
             this.lblCourseName.TabIndex = 26;
             this.lblCourseName.Text = "Course";
-            // 
-            // lbGrade
-            // 
-            this.lbGrade.AutoSize = true;
-            this.lbGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(236)))));
-            this.lbGrade.Font = new System.Drawing.Font("MV Boli", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.lbGrade.Location = new System.Drawing.Point(299, 44);
-            this.lbGrade.Name = "lbGrade";
-            this.lbGrade.Size = new System.Drawing.Size(32, 22);
-            this.lbGrade.TabIndex = 31;
-            this.lbGrade.Text = "A-";
             // 
             // guna2ShadowPanel2
             // 
@@ -118,45 +130,46 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // btnDelete
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button1.FillColor = System.Drawing.Color.Red;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2Button1.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_delete_48;
-            this.guna2Button1.Location = new System.Drawing.Point(423, 20);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Size = new System.Drawing.Size(43, 40);
-            this.guna2Button1.TabIndex = 35;
+            this.btnDelete.Animated = true;
+            this.btnDelete.BorderRadius = 12;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.FillColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_delete_48;
+            this.btnDelete.Location = new System.Drawing.Point(423, 20);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Size = new System.Drawing.Size(43, 40);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnAddCourse
+            // btnEdit
             // 
-            this.btnAddCourse.Animated = true;
-            this.btnAddCourse.BorderRadius = 12;
-            this.btnAddCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
-            this.btnAddCourse.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.btnAddCourse.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
-            this.btnAddCourse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
-            this.btnAddCourse.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_pen_48;
-            this.btnAddCourse.Location = new System.Drawing.Point(374, 20);
-            this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
-            this.btnAddCourse.Size = new System.Drawing.Size(43, 40);
-            this.btnAddCourse.TabIndex = 34;
+            this.btnEdit.Animated = true;
+            this.btnEdit.BorderRadius = 12;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnEdit.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_pen_48;
+            this.btnEdit.Location = new System.Drawing.Point(374, 20);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnEdit.Size = new System.Drawing.Size(43, 40);
+            this.btnEdit.TabIndex = 34;
             // 
             // label1
             // 
@@ -169,16 +182,16 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Grade:";
             // 
-            // lblCreditHours
+            // CreditHours
             // 
-            this.lblCreditHours.AutoSize = true;
-            this.lblCreditHours.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
-            this.lblCreditHours.Location = new System.Drawing.Point(89, 48);
-            this.lblCreditHours.Name = "lblCreditHours";
-            this.lblCreditHours.Size = new System.Drawing.Size(88, 17);
-            this.lblCreditHours.TabIndex = 30;
-            this.lblCreditHours.Text = "Credit Hours:";
+            this.CreditHours.AutoSize = true;
+            this.CreditHours.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreditHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
+            this.CreditHours.Location = new System.Drawing.Point(89, 48);
+            this.CreditHours.Name = "CreditHours";
+            this.CreditHours.Size = new System.Drawing.Size(88, 17);
+            this.CreditHours.TabIndex = 30;
+            this.CreditHours.Text = "Credit Hours:";
             // 
             // pictureBox2
             // 
@@ -188,18 +201,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(52, 53);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
-            // 
-            // lbCreditHours
-            // 
-            this.lbCreditHours.AutoSize = true;
-            this.lbCreditHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.lbCreditHours.Font = new System.Drawing.Font("MV Boli", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreditHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
-            this.lbCreditHours.Location = new System.Drawing.Point(183, 44);
-            this.lbCreditHours.Name = "lbCreditHours";
-            this.lbCreditHours.Size = new System.Drawing.Size(23, 22);
-            this.lbCreditHours.TabIndex = 42;
-            this.lbCreditHours.Text = "0";
             // 
             // UC_CourseCard
             // 
@@ -222,14 +223,14 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.Label lblCourseName;
-        private System.Windows.Forms.Label lblCreditHours;
+        private System.Windows.Forms.Label CreditHours;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnAddCourse;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private System.Windows.Forms.Label lbGrade;
-        private System.Windows.Forms.Label lbCreditHours;
+        private System.Windows.Forms.Label lblGrade;
+        private System.Windows.Forms.Label lblCreditHours;
     }
 }

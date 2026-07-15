@@ -53,7 +53,7 @@
             this.btnAddCourse = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbCreditHours = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbGrade = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCourseBName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -449,7 +449,7 @@
             this.pnlAddNewCourse.Controls.Add(this.btnAddCourse);
             this.pnlAddNewCourse.Controls.Add(this.guna2PictureBox3);
             this.pnlAddNewCourse.Controls.Add(this.cbCreditHours);
-            this.pnlAddNewCourse.Controls.Add(this.cbGrade);
+            this.pnlAddNewCourse.Controls.Add(this.tbGrade);
             this.pnlAddNewCourse.Controls.Add(this.tbCourseBName);
             this.pnlAddNewCourse.Controls.Add(this.label3);
             this.pnlAddNewCourse.Controls.Add(this.label2);
@@ -524,29 +524,29 @@
             this.cbCreditHours.Size = new System.Drawing.Size(107, 36);
             this.cbCreditHours.TabIndex = 21;
             // 
-            // cbGrade
+            // tbGrade
             // 
-            this.cbGrade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
-            this.cbGrade.BorderRadius = 10;
-            this.cbGrade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cbGrade.DefaultText = "";
-            this.cbGrade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.cbGrade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.cbGrade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.cbGrade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.cbGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.cbGrade.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.cbGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGrade.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_grade_48;
-            this.cbGrade.Location = new System.Drawing.Point(42, 171);
-            this.cbGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbGrade.Name = "cbGrade";
-            this.cbGrade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.cbGrade.PlaceholderText = "";
-            this.cbGrade.SelectedText = "";
-            this.cbGrade.Size = new System.Drawing.Size(107, 36);
-            this.cbGrade.TabIndex = 19;
+            this.tbGrade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.tbGrade.BorderRadius = 10;
+            this.tbGrade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbGrade.DefaultText = "";
+            this.tbGrade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbGrade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbGrade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGrade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.tbGrade.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.tbGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGrade.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_grade_48;
+            this.tbGrade.Location = new System.Drawing.Point(42, 171);
+            this.tbGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbGrade.Name = "tbGrade";
+            this.tbGrade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.tbGrade.PlaceholderText = "";
+            this.tbGrade.SelectedText = "";
+            this.tbGrade.Size = new System.Drawing.Size(107, 36);
+            this.tbGrade.TabIndex = 19;
             // 
             // tbCourseBName
             // 
@@ -811,12 +811,12 @@
             // picCheckCGPA3
             // 
             this.picCheckCGPA3.FillColor = System.Drawing.Color.Transparent;
-            this.picCheckCGPA3.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_correct_48;
+            this.picCheckCGPA3.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_correct_64;
             this.picCheckCGPA3.ImageRotate = 0F;
-            this.picCheckCGPA3.Location = new System.Drawing.Point(0, 60);
+            this.picCheckCGPA3.Location = new System.Drawing.Point(9, 60);
             this.picCheckCGPA3.Name = "picCheckCGPA3";
             this.picCheckCGPA3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picCheckCGPA3.Size = new System.Drawing.Size(29, 21);
+            this.picCheckCGPA3.Size = new System.Drawing.Size(26, 21);
             this.picCheckCGPA3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCheckCGPA3.TabIndex = 44;
             this.picCheckCGPA3.TabStop = false;
@@ -826,11 +826,11 @@
             this.lbCheckCGPA3.AutoSize = true;
             this.lbCheckCGPA3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCheckCGPA3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(107)))), ((int)(((byte)(85)))));
-            this.lbCheckCGPA3.Location = new System.Drawing.Point(29, 63);
+            this.lbCheckCGPA3.Location = new System.Drawing.Point(40, 62);
             this.lbCheckCGPA3.Name = "lbCheckCGPA3";
-            this.lbCheckCGPA3.Size = new System.Drawing.Size(194, 34);
+            this.lbCheckCGPA3.Size = new System.Drawing.Size(198, 34);
             this.lbCheckCGPA3.TabIndex = 45;
-            this.lbCheckCGPA3.Text = "You need a Semester GPA of \r\n3.33to achieve a CGPA of 3.33.";
+            this.lbCheckCGPA3.Text = "You need a Semester GPA of \r\n3.33 to achieve a CGPA of 3.33.";
             // 
             // lbCheckCGPA1
             // 
@@ -1357,7 +1357,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlContent;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlAddNewCourse;
         private Guna.UI2.WinForms.Guna2ComboBox cbCreditHours;
-        private Guna.UI2.WinForms.Guna2TextBox cbGrade;
+        private Guna.UI2.WinForms.Guna2TextBox tbGrade;
         private Guna.UI2.WinForms.Guna2TextBox tbCourseBName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -99,9 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\THE FINAL CARD.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\photo_2026-07-12_01-01-33.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-correct-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-correct-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
