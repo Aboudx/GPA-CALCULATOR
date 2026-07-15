@@ -51,7 +51,7 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlAddNewCourse = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnAddCourse = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.TittleAddOrUpdate = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbCreditHours = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tbGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbCourseBName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -125,7 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCompletedHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.pnlAddNewCourse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.guna2ShadowPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -239,7 +239,6 @@
             this.picGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picGitHub.TabIndex = 26;
             this.picGitHub.TabStop = false;
-            this.picGitHub.Click += new System.EventHandler(this.picGitHub_Click);
             // 
             // picLinkedIn
             // 
@@ -254,7 +253,6 @@
             this.picLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLinkedIn.TabIndex = 25;
             this.picLinkedIn.TabStop = false;
-            this.picLinkedIn.Click += new System.EventHandler(this.picLinkedIn_Click);
             // 
             // guna2PictureBox13
             // 
@@ -296,7 +294,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = global::GPA_CALCULATOR.Properties.Resources.photo_2026_07_12_01_01_33;
+            this.guna2PictureBox1.Image = global::GPA_CALCULATOR.Properties.Resources._1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -447,7 +445,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlAddNewCourse.BackColor = System.Drawing.Color.Transparent;
             this.pnlAddNewCourse.Controls.Add(this.btnAddCourse);
-            this.pnlAddNewCourse.Controls.Add(this.guna2PictureBox3);
+            this.pnlAddNewCourse.Controls.Add(this.TittleAddOrUpdate);
             this.pnlAddNewCourse.Controls.Add(this.cbCreditHours);
             this.pnlAddNewCourse.Controls.Add(this.tbGrade);
             this.pnlAddNewCourse.Controls.Add(this.tbCourseBName);
@@ -485,17 +483,17 @@
             this.btnAddCourse.Size = new System.Drawing.Size(224, 37);
             this.btnAddCourse.TabIndex = 23;
             this.btnAddCourse.Text = "Add Course";
-            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddNewAndEditCourse_Click);
             // 
-            // guna2PictureBox3
+            // TittleAddOrUpdate
             // 
-            this.guna2PictureBox3.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_052622;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(23, 9);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(209, 54);
-            this.guna2PictureBox3.TabIndex = 22;
-            this.guna2PictureBox3.TabStop = false;
+            this.TittleAddOrUpdate.Image = global::GPA_CALCULATOR.Properties.Resources.AddNewCourseImage;
+            this.TittleAddOrUpdate.ImageRotate = 0F;
+            this.TittleAddOrUpdate.Location = new System.Drawing.Point(23, 9);
+            this.TittleAddOrUpdate.Name = "TittleAddOrUpdate";
+            this.TittleAddOrUpdate.Size = new System.Drawing.Size(209, 54);
+            this.TittleAddOrUpdate.TabIndex = 22;
+            this.TittleAddOrUpdate.TabStop = false;
             // 
             // cbCreditHours
             // 
@@ -1308,7 +1306,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.pnlAddNewCourse.ResumeLayout(false);
             this.pnlAddNewCourse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).EndInit();
             this.pnlRight.ResumeLayout(false);
             this.guna2ShadowPanel4.ResumeLayout(false);
             this.guna2ShadowPanel4.PerformLayout();
@@ -1362,7 +1360,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox TittleAddOrUpdate;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.Label label4;

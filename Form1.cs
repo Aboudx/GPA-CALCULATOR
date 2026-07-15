@@ -15,9 +15,15 @@ namespace GPA_CALCULATOR
     public partial class frmMain : Form
     {
         public enum enLetterGrades : byte
-        { 
-            AP=1 ,A ,AM ,BP ,B ,BM ,CP ,C ,CM,DP,D ,F
+        {
+            AP = 1, A, AM, BP, B, BM, CP, C, CM, DP, D, F
         };
+
+        private enum enMode
+        {
+            Normal,
+            Update
+        }
 
         private struct stStudent
         {
@@ -34,14 +40,13 @@ namespace GPA_CALCULATOR
             public float Grade;
             public byte CreditHours;
             public enLetterGrades LetterGrade;
-
-            public bool MarkForDelete;
-            public bool MarkForUpdate;
         }
 
         List<stCourse> lstCourses = new List<stCourse>();
         stStudent _Student;
-        
+        enMode _CurrentMode;
+        private UC_CourseCard _SelectedCardForUpdate;
+
         public frmMain()
         {
             InitializeComponent();
@@ -49,9 +54,14 @@ namespace GPA_CALCULATOR
 
             _Student = new stStudent();
 
+            _CurrentMode = enMode.Normal;
+
             _Student.SemesterTotalCourse = 0;
             _Student.ThisSemesterHours = 0;
+
         }
+
+
 
         private void ResetCourseInputs()
         {
@@ -118,12 +128,13 @@ namespace GPA_CALCULATOR
 
         private stCourse CreateCourse()
         {
-            stCourse course=new stCourse();
+            stCourse course = new stCourse();
 
             course.Grade = Convert.ToSingle(tbGrade.Text);
             course.CourseName = tbCourseBName.Text;
             course.CreditHours = Convert.ToByte(cbCreditHours.Text);
             course.LetterGrade = GetLetterGrade(course.Grade);
+            course.GuidID = Guid.NewGuid();
 
             _Student.ThisSemesterHours += course.CreditHours;
             _Student.SemesterTotalCourse++;
@@ -140,6 +151,9 @@ namespace GPA_CALCULATOR
             lstCourses.Add(Course);
 
             UC_CourseCard Card = new UC_CourseCard(Course);
+            Card.DeleteRequested += Card_DeleteRequested;
+            Card.UpdateRequested += Card_UpdateRequested;
+
             flbCourseList.Controls.Add(Card);
 
             UpdateStatistics();
@@ -147,19 +161,132 @@ namespace GPA_CALCULATOR
 
         }
 
-        private void btnAddCourse_Click(object sender, EventArgs e)
+        private void ResetMode()
         {
-            AddNewCourse();
+            _CurrentMode = enMode.Normal;
+
+            _SelectedCardForUpdate.ChangeableDeleteAndEditButtons(true);
+
+            _SelectedCardForUpdate = null;
+
+            ChangeButtonAndTittleForAddNewMode();
+            ResetCourseInputs();
         }
 
-        private void picGitHub_Click(object sender, EventArgs e)
+        public void btnAddNewAndEditCourse_Click(object sender, EventArgs e)
         {
+            if (_CurrentMode == enMode.Update)
+            {
+                UpdateCourse(_SelectedCardForUpdate);
+                ResetMode();
+                return;
+            }
+
+            if (_CurrentMode == enMode.Normal)
+                AddNewCourse();
+        }
+
+        private void UpdateCourse(UC_CourseCard card)
+        {
+
+            byte OldHours = card.Course.CreditHours;
+
+            int CardIndex = flbCourseList.Controls.IndexOf(card);
+
+            UC_CourseCard UptCard = (UC_CourseCard)flbCourseList.Controls[CardIndex];
+            UptCard.Course = UpdateCourseInfo(card.Course);
+
+            _Student.ThisSemesterHours -= OldHours;
+            _Student.ThisSemesterHours += UptCard.Course.CreditHours;
+
+            UptCard.Refresh();
+
+            int CourseIndex = lstCourses.FindIndex(c => c.GuidID == card.Course.GuidID);
+
+            lstCourses[CourseIndex] = UptCard.Course;
+
+            UpdateStatistics();
+        }
+
+        private void DeleteCourse(UC_CourseCard card)
+        {
+            lstCourses.Remove(card.Course);
+            flbCourseList.Controls.Remove(card);
+
+            _Student.ThisSemesterHours -= card.Course.CreditHours;
+            _Student.SemesterTotalCourse--;
+
+            UpdateStatistics();
 
         }
 
-        private void picLinkedIn_Click(object sender, EventArgs e)
+        private void Card_DeleteRequested(object sender, EventArgs e)
+        {
+            DeleteCourse((UC_CourseCard)sender);
+        }
+
+        private void SetCardInfoInLeftSection(stCourse course)
+        {
+            tbCourseBName.Text = course.CourseName;
+            tbGrade.Text = course.Grade.ToString();
+            cbCreditHours.Text = course.CreditHours.ToString();
+        }
+
+        private void ChangeButtonAndTittleForUpdateMode()
         {
 
+            TittleAddOrUpdate.Image = Properties.Resources.UpdateCourseImage;
+            TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            btnAddCourse.Image = Properties.Resources.icons8_pen_48;
+            btnAddCourse.Text = "Update Course";
+        }
+
+        private stCourse UpdateCourseInfo(stCourse course)
+        {
+            course.CourseName = tbCourseBName.Text;
+            course.CreditHours = Convert.ToByte(cbCreditHours.Text);
+            course.Grade = Convert.ToSingle(tbGrade.Text);
+            course.LetterGrade = GetLetterGrade(course.Grade);
+
+            return course;
+        }
+        private void ChangeToUpdateMode(UC_CourseCard Card)
+        {
+            _CurrentMode = enMode.Update;
+
+            _SelectedCardForUpdate.ChangeableDeleteAndEditButtons(false);
+
+            ChangeButtonAndTittleForUpdateMode();
+
+
+            stCourse course = Card.Course;
+            SetCardInfoInLeftSection(course);
+
+        }
+
+        private void ChangeButtonAndTittleForAddNewMode()
+        {
+
+            TittleAddOrUpdate.Image = Properties.Resources.AddNewCourseImage;
+            TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.Normal;
+
+            btnAddCourse.Image = Properties.Resources.icons8_plus_24;
+            btnAddCourse.Text = "Add Course";
+        }
+
+        private void ApplyCurrentUpdate()
+        {
+            UpdateCourse(_SelectedCardForUpdate);
+            _SelectedCardForUpdate.ChangeableDeleteAndEditButtons(true);
+        }
+
+        private void Card_UpdateRequested(object sender, EventArgs e)
+        {
+            if (_CurrentMode == enMode.Update) ApplyCurrentUpdate();
+
+            _SelectedCardForUpdate = (UC_CourseCard)sender;
+            ChangeToUpdateMode(_SelectedCardForUpdate);
         }
     }
 }

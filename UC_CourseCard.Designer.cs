@@ -170,6 +170,7 @@
             this.btnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
             this.btnEdit.Size = new System.Drawing.Size(43, 40);
             this.btnEdit.TabIndex = 34;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label1
             // 

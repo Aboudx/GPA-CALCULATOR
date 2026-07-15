@@ -63,6 +63,26 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AddNewCourseImage {
+            get {
+                object obj = ResourceManager.GetObject("AddNewCourseImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GitHub_Logo {
             get {
                 object obj = ResourceManager.GetObject("GitHub Logo", resourceCulture);
@@ -293,16 +313,6 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2026_07_12_01_01_33 {
-            get {
-                object obj = ResourceManager.GetObject("photo_2026-07-12_01-01-33", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap photo_2026_07_12_20_40_43 {
             get {
                 object obj = ResourceManager.GetObject("photo_2026-07-12_20-40-43", resourceCulture);
@@ -336,16 +346,6 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_07_12_050727 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-07-12 050727", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2026_07_12_052622 {
-            get {
-                object obj = ResourceManager.GetObject("Screenshot 2026-07-12 052622", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,6 +396,16 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_07_13_042410 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-07-13 042410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UpdateCourseImage {
+            get {
+                object obj = ResourceManager.GetObject("UpdateCourseImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,17 +13,46 @@ namespace GPA_CALCULATOR
 {
     public partial class UC_CourseCard : UserControl
     {
-        enLetterGrades Grade;
+        public event EventHandler DeleteRequested;
+        public event EventHandler UpdateRequested;
+
+
+        private stCourse _course;
+        public stCourse Course
+        {
+            get { return _course; }
+            set
+            {
+                _course = value;
+
+                RefreshCard();
+
+                ChangeForeAndBackColorGrade();
+            }
+        }
         public UC_CourseCard(stCourse course)
         {
             InitializeComponent();
-            Grade = course.LetterGrade;
+
+            _course= course; 
 
             ChangeForeAndBackColorGrade();
 
-            lblCourseName.Text = course.CourseName;
-            lblCreditHours.Text = course.CreditHours.ToString();
-            lblGrade.Text = GetLetterGrade(Grade);
+            RefreshCard();
+        }
+
+        public void ChangeableDeleteAndEditButtons(bool State)
+        {
+            btnEdit.Enabled = State;
+            btnDelete.Enabled = State;
+        }
+
+        private void RefreshCard()
+        {
+            lblCourseName.Text = _course.CourseName;
+            lblCreditHours.Text = _course.CreditHours.ToString();
+            lblGrade.Text = GetLetterGrade(_course.LetterGrade);
+            
         }
 
         public static string GetLetterGrade(enLetterGrades grade)
@@ -71,16 +100,20 @@ namespace GPA_CALCULATOR
             }
         }
 
-        private void ChangeForeAndBackColorGrade()
+        public void ChangeForeAndBackColorGrade()
         {
-            if (Grade == enLetterGrades.AP || Grade == enLetterGrades.A || Grade == enLetterGrades.AM
-             || Grade == enLetterGrades.BP || Grade == enLetterGrades.B || Grade == enLetterGrades.BM)
+            if (_course.LetterGrade == enLetterGrades.AP || _course.LetterGrade == enLetterGrades.A ||
+                _course.LetterGrade == enLetterGrades.AM
+             || _course.LetterGrade == enLetterGrades.BP || _course.LetterGrade == enLetterGrades.B ||
+             _course.LetterGrade == enLetterGrades.BM)
             {
                 lblGrade.BackColor = Color.FromArgb(232, 247, 236);
                 lblGrade.ForeColor = Color.FromArgb(46, 125, 50);
             }
-            else if (Grade == enLetterGrades.CP || Grade == enLetterGrades.C || Grade == enLetterGrades.AM
-             || Grade == enLetterGrades.CM || Grade == enLetterGrades.DP || Grade == enLetterGrades.D)
+            else if (_course.LetterGrade == enLetterGrades.CP || _course.LetterGrade == enLetterGrades.C ||
+                _course.LetterGrade == enLetterGrades.AM
+             || _course.LetterGrade == enLetterGrades.CM || _course.LetterGrade == enLetterGrades.DP ||
+             _course.LetterGrade == enLetterGrades.D)
             {
                 lblGrade.BackColor = Color.FromArgb(255, 244, 221);
                 lblGrade.ForeColor = Color.FromArgb(199, 120, 0);
@@ -94,7 +127,14 @@ namespace GPA_CALCULATOR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            DeleteRequested?.Invoke(this, EventArgs.Empty);
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            UpdateRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+
     }
 }

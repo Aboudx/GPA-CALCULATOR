@@ -195,9 +195,6 @@
     <None Include="Resources\photo_2026-07-12_20-31-021.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\photo_2026-07-12_20-32-58.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\photo_2026-07-12_20-40-43.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +244,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-correct-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateCourseTittle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2026-07-15_08-37-19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2026-07-15_08-37-191.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2026-07-15_08-37-192.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
