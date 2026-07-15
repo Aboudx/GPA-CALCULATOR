@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlTittle = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,7 +69,7 @@
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCalculate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlCheckTargetCGPA = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.picCheckCGPA3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -294,7 +295,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = global::GPA_CALCULATOR.Properties.Resources._1;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -340,7 +341,7 @@
             // 
             this.guna2PictureBox6.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(264, 39);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(253, 39);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(16, 14);
             this.guna2PictureBox6.TabIndex = 30;
@@ -351,7 +352,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(150, 37);
+            this.label5.Location = new System.Drawing.Point(150, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 17);
             this.label5.TabIndex = 29;
@@ -361,7 +362,7 @@
             // 
             this.guna2PictureBox5.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(118, 39);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(108, 39);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(16, 14);
             this.guna2PictureBox5.TabIndex = 28;
@@ -423,7 +424,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 37);
+            this.label4.Location = new System.Drawing.Point(12, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 25;
@@ -705,7 +706,7 @@
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.guna2Button2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
+            this.guna2ShadowPanel1.Controls.Add(this.btnCalculate);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 306);
@@ -739,26 +740,27 @@
             this.guna2Button2.TabIndex = 25;
             this.guna2Button2.Text = "Reset";
             // 
-            // guna2Button1
+            // btnCalculate
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
-            this.guna2Button1.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_calculator_24;
-            this.guna2Button1.Location = new System.Drawing.Point(186, 4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
-            this.guna2Button1.Size = new System.Drawing.Size(224, 37);
-            this.guna2Button1.TabIndex = 24;
-            this.guna2Button1.Text = "Calculate";
+            this.btnCalculate.Animated = true;
+            this.btnCalculate.BorderRadius = 12;
+            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalculate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalculate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalculate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnCalculate.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCalculate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnCalculate.ForeColor = System.Drawing.Color.White;
+            this.btnCalculate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnCalculate.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_calculator_24;
+            this.btnCalculate.Location = new System.Drawing.Point(186, 4);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnCalculate.Size = new System.Drawing.Size(224, 37);
+            this.btnCalculate.TabIndex = 24;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // guna2ShadowPanel10
             // 
@@ -887,7 +889,7 @@
             // 
             this.guna2PictureBox16.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
             this.guna2PictureBox16.ImageRotate = 0F;
-            this.guna2PictureBox16.Location = new System.Drawing.Point(165, 145);
+            this.guna2PictureBox16.Location = new System.Drawing.Point(152, 142);
             this.guna2PictureBox16.Name = "guna2PictureBox16";
             this.guna2PictureBox16.Size = new System.Drawing.Size(16, 14);
             this.guna2PictureBox16.TabIndex = 38;
@@ -934,7 +936,7 @@
             // 
             this.guna2PictureBox15.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
             this.guna2PictureBox15.ImageRotate = 0F;
-            this.guna2PictureBox15.Location = new System.Drawing.Point(109, 81);
+            this.guna2PictureBox15.Location = new System.Drawing.Point(96, 79);
             this.guna2PictureBox15.Name = "guna2PictureBox15";
             this.guna2PictureBox15.Size = new System.Drawing.Size(16, 14);
             this.guna2PictureBox15.TabIndex = 35;
@@ -1406,7 +1408,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox16;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCalculate;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
         private System.Windows.Forms.Label lbTotalCourse;
         private System.Windows.Forms.Label lbTotalCredit;

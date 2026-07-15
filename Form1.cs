@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
 using System.Windows.Forms;
+using static GPA_CALCULATOR.frmMain;
 
 namespace GPA_CALCULATOR
 {
@@ -25,19 +26,31 @@ namespace GPA_CALCULATOR
             Update
         }
 
+
+        private struct stGPA
+        {
+            public double SemesterGPA;
+            public double PrevCumuGPA;
+            public double NewCumuGPA;
+            public double SemesterGradePoints;
+            public double TotalGradePoints;
+
+        }
+
         private struct stStudent
         {
-            public double CumuGPA;
-            public double SemesterGPA;
+            public stGPA _GPA;
             public byte CompletedHours;
             public byte ThisSemesterHours;
             public byte SemesterTotalCourse;
         }
+
         public struct stCourse
         {
             public Guid GuidID;
             public string CourseName;
             public float Grade;
+            public double GradePoints;
             public byte CreditHours;
             public enLetterGrades LetterGrade;
         }
@@ -53,15 +66,17 @@ namespace GPA_CALCULATOR
             this.BackColor = ColorTranslator.FromHtml("#F4F7FC");
 
             _Student = new stStudent();
+            _Student._GPA = new stGPA();
 
             _CurrentMode = enMode.Normal;
+
+            _Student._GPA.SemesterGradePoints = 0;
+            _Student._GPA.TotalGradePoints = 0;
 
             _Student.SemesterTotalCourse = 0;
             _Student.ThisSemesterHours = 0;
 
         }
-
-
 
         private void ResetCourseInputs()
         {
@@ -74,15 +89,51 @@ namespace GPA_CALCULATOR
 
         private void UpdateStatistics()
         {
+
             lbTotalCourse.Text = _Student.SemesterTotalCourse.ToString();
             lbTotalCredit.Text = _Student.ThisSemesterHours.ToString();
+
+            lbSemesterGPA.Text = _Student._GPA.SemesterGPA.ToString("F2");
+            lbCumuGPA.Text = _Student._GPA.NewCumuGPA.ToString("F2");
+            lbTotalHours.Text = _Student.CompletedHours.ToString();
         }
+
+        private bool FocusInEmptyItem(Control control)
+        {
+            control.Focus();
+            return true;
+        }
+
         private bool IsCourseInfoIncomplete()
         {
-            if (string.IsNullOrWhiteSpace(tbCourseBName.Text)
-               || string.IsNullOrWhiteSpace(tbGrade.Text)
-               || string.IsNullOrWhiteSpace(cbCreditHours.Text)
-              ) return true;
+            if (string.IsNullOrWhiteSpace(tbCourseBName.Text))
+            {
+                return FocusInEmptyItem(tbCourseBName);
+            }
+
+            if (string.IsNullOrWhiteSpace(tbGrade.Text))
+            {
+                return FocusInEmptyItem(tbGrade);
+
+            }
+
+            if (string.IsNullOrWhiteSpace(cbCreditHours.Text))
+            {
+               return FocusInEmptyItem(cbCreditHours);
+            }
+
+               return false;
+
+        }
+
+        private bool IsStudentInfoInComplete()
+        {
+            if (string.IsNullOrWhiteSpace(tbCumuGPA.Text))
+                return FocusInEmptyItem(tbCumuGPA);
+
+            if(string.IsNullOrWhiteSpace(nudCompletedHours.Value.ToString()))
+                return FocusInEmptyItem(nudCompletedHours);
+
 
             return false;
         }
@@ -126,6 +177,67 @@ namespace GPA_CALCULATOR
 
         }
 
+        private double GetGradePoints(enLetterGrades grades)
+        {
+            switch (grades)
+            {
+                case enLetterGrades.AP:
+                    return 4.00;
+                case enLetterGrades.A:
+                    return 3.75;
+                case enLetterGrades.AM:
+                    return 3.50;
+                case enLetterGrades.BP:
+                    return 3.25;
+                case enLetterGrades.B:
+                    return 3.00;
+                case enLetterGrades.BM:
+                    return 2.75;
+                case enLetterGrades.CP:
+                    return 2.50;
+                case enLetterGrades.C:
+                    return 2.25;
+                case enLetterGrades.CM:
+                    return 2.00;
+                case enLetterGrades.DP:
+                    return 1.75;
+                case enLetterGrades.D:
+                    return 1.00;
+                case enLetterGrades.F:
+                    return 0.00;
+                default:
+                    return 0.00;
+            }
+        }
+
+        private double CalculateGradePoints()
+        {
+            double Points = 0;
+
+            foreach(stCourse C in lstCourses)
+            {
+                Points += (C.GradePoints * C.CreditHours);
+            }
+
+            return Points;
+        }
+
+        private double CalculateSemesterGPA()
+        {
+            return (double)(_Student._GPA.SemesterGradePoints / _Student.ThisSemesterHours);
+        }
+
+        private double CalculateTotalGradePoints()
+        {
+            return (double)(_Student.CompletedHours * _Student._GPA.PrevCumuGPA);
+        }
+
+        private double CalculateCGPA()
+        {
+            return ((_Student._GPA.TotalGradePoints + _Student._GPA.SemesterGradePoints)
+                / (_Student.ThisSemesterHours + _Student.CompletedHours));
+        }
+
         private stCourse CreateCourse()
         {
             stCourse course = new stCourse();
@@ -134,6 +246,7 @@ namespace GPA_CALCULATOR
             course.CourseName = tbCourseBName.Text;
             course.CreditHours = Convert.ToByte(cbCreditHours.Text);
             course.LetterGrade = GetLetterGrade(course.Grade);
+            course.GradePoints = GetGradePoints(course.LetterGrade);
             course.GuidID = Guid.NewGuid();
 
             _Student.ThisSemesterHours += course.CreditHours;
@@ -147,6 +260,7 @@ namespace GPA_CALCULATOR
             if (IsCourseInfoIncomplete()) return;
 
             stCourse Course = CreateCourse();
+
 
             lstCourses.Add(Course);
 
@@ -169,7 +283,7 @@ namespace GPA_CALCULATOR
 
             _SelectedCardForUpdate = null;
 
-            ChangeButtonAndTittleForAddNewMode();
+            ChangeButtonAndTittle();
             ResetCourseInputs();
         }
 
@@ -216,6 +330,7 @@ namespace GPA_CALCULATOR
             _Student.ThisSemesterHours -= card.Course.CreditHours;
             _Student.SemesterTotalCourse--;
 
+
             UpdateStatistics();
 
         }
@@ -232,22 +347,13 @@ namespace GPA_CALCULATOR
             cbCreditHours.Text = course.CreditHours.ToString();
         }
 
-        private void ChangeButtonAndTittleForUpdateMode()
-        {
-
-            TittleAddOrUpdate.Image = Properties.Resources.UpdateCourseImage;
-            TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            btnAddCourse.Image = Properties.Resources.icons8_pen_48;
-            btnAddCourse.Text = "Update Course";
-        }
-
         private stCourse UpdateCourseInfo(stCourse course)
         {
             course.CourseName = tbCourseBName.Text;
             course.CreditHours = Convert.ToByte(cbCreditHours.Text);
             course.Grade = Convert.ToSingle(tbGrade.Text);
             course.LetterGrade = GetLetterGrade(course.Grade);
+            course.GradePoints = GetGradePoints(course.LetterGrade);
 
             return course;
         }
@@ -257,7 +363,7 @@ namespace GPA_CALCULATOR
 
             _SelectedCardForUpdate.ChangeableDeleteAndEditButtons(false);
 
-            ChangeButtonAndTittleForUpdateMode();
+            ChangeButtonAndTittle();
 
 
             stCourse course = Card.Course;
@@ -265,14 +371,29 @@ namespace GPA_CALCULATOR
 
         }
 
-        private void ChangeButtonAndTittleForAddNewMode()
+        private void ChangeButtonAndTittle()
         {
+            switch (_CurrentMode)
+            {
+                case enMode.Normal:
+                    TittleAddOrUpdate.Image = Properties.Resources.AddNewCourseImage;
+                    TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.Normal;
 
-            TittleAddOrUpdate.Image = Properties.Resources.AddNewCourseImage;
-            TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.Normal;
+                    btnAddCourse.Image = Properties.Resources.icons8_plus_24;
+                    btnAddCourse.Text = "Add Course";
+                    break;
 
-            btnAddCourse.Image = Properties.Resources.icons8_plus_24;
-            btnAddCourse.Text = "Add Course";
+                case enMode.Update:
+                    TittleAddOrUpdate.Image = Properties.Resources.UpdateCourseImage;
+                    TittleAddOrUpdate.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    btnAddCourse.Image = Properties.Resources.icons8_pen_48;
+                    btnAddCourse.Text = "Update Course";
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         private void ApplyCurrentUpdate()
@@ -287,6 +408,31 @@ namespace GPA_CALCULATOR
 
             _SelectedCardForUpdate = (UC_CourseCard)sender;
             ChangeToUpdateMode(_SelectedCardForUpdate);
+        }
+
+        private void SetGPAData()
+        {
+            _Student._GPA.SemesterGradePoints = CalculateGradePoints();
+            _Student._GPA.SemesterGPA = CalculateSemesterGPA();
+            _Student._GPA.TotalGradePoints = CalculateTotalGradePoints();
+            _Student._GPA.NewCumuGPA = CalculateCGPA();
+        }
+
+        private void CalculateGPA()
+        {
+            if (IsStudentInfoInComplete()) return;
+
+            _Student._GPA.PrevCumuGPA = Convert.ToDouble(tbCumuGPA.Text);
+            _Student.CompletedHours = Convert.ToByte(nudCompletedHours.Value);
+            SetGPAData();
+
+            UpdateStatistics();
+
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            CalculateGPA();
         }
     }
 }
