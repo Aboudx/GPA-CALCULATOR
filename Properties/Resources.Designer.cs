@@ -183,6 +183,16 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gpa_calculator_50__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gpa-calculator-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_grade_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-grade-48", resourceCulture);

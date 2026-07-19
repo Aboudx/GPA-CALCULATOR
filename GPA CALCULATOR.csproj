@@ -257,5 +257,8 @@
   <ItemGroup>
     <None Include="Resources\photo_2026-07-15_08-37-192.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gpa-calculator-50 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

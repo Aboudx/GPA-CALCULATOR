@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Management;
@@ -32,9 +33,12 @@ namespace GPA_CALCULATOR
             public double SemesterGPA;
             public double PrevCumuGPA;
             public double NewCumuGPA;
+            public double ReqCumuGPA;
+            public double ReqGPA;
+            public double ReqCumuGPAPoints;
+            public double ReqGPAPoints;
             public double SemesterGradePoints;
             public double TotalGradePoints;
-
         }
 
         private struct stStudent
@@ -43,6 +47,7 @@ namespace GPA_CALCULATOR
             public byte CompletedHours;
             public byte ThisSemesterHours;
             public byte SemesterTotalCourse;
+            public byte TargetSemsterHours;
         }
 
         public struct stCourse
@@ -96,6 +101,16 @@ namespace GPA_CALCULATOR
             lbSemesterGPA.Text = _Student._GPA.SemesterGPA.ToString("F2");
             lbCumuGPA.Text = _Student._GPA.NewCumuGPA.ToString("F2");
             lbTotalHours.Text = _Student.CompletedHours.ToString();
+
+            if (flbCourseList.Controls.Count <= 1)//1 => Because Position (1) Have Constant Value.
+            {
+                lbSemesterGPA.Text = "0.00";
+            }
+
+            if(!IsStudentInfoInCompleteToCalcReqGPA())
+            {
+                lbCheckCGPA2.Text = _Student._GPA.ReqGPA.ToString("F2");
+            }
         }
 
         private bool FocusInEmptyItem(Control control)
@@ -134,6 +149,24 @@ namespace GPA_CALCULATOR
             if(string.IsNullOrWhiteSpace(nudCompletedHours.Value.ToString()))
                 return FocusInEmptyItem(nudCompletedHours);
 
+
+            return false;
+        }
+
+        private bool IsStudentInfoInCompleteToCalcReqGPA()
+        {
+            if (string.IsNullOrWhiteSpace(tbCumuGPA.Text))
+                return FocusInEmptyItem(tbCumuGPA);
+
+            if (string.IsNullOrWhiteSpace(nudCompletedHours.Value.ToString()))
+                return FocusInEmptyItem(nudCompletedHours);
+
+
+            if (string.IsNullOrWhiteSpace(tbTargetCGPA.Text))
+                return FocusInEmptyItem(tbTargetCGPA);
+
+            if (string.IsNullOrWhiteSpace(nudSemsHoursTCGPA.Value.ToString()))
+                return FocusInEmptyItem(nudSemsHoursTCGPA);
 
             return false;
         }
@@ -238,6 +271,21 @@ namespace GPA_CALCULATOR
                 / (_Student.ThisSemesterHours + _Student.CompletedHours));
         }
 
+        private double CalculateReqCumuGPAPoints()
+        {
+            return (double)(_Student._GPA.ReqCumuGPA * (_Student.CompletedHours + _Student.TargetSemsterHours));
+        }
+
+        private double CalculateReqGPAPoints()
+        {
+            return (double)(_Student._GPA.ReqCumuGPAPoints - _Student._GPA.TotalGradePoints);
+        }
+
+        private double CalculateReqGPA()
+        {
+            return (double)(_Student._GPA.ReqGPAPoints / _Student.TargetSemsterHours);
+        }
+
         private stCourse CreateCourse()
         {
             stCourse course = new stCourse();
@@ -324,6 +372,12 @@ namespace GPA_CALCULATOR
 
         private void DeleteCourse(UC_CourseCard card)
         {
+            if (_CurrentMode == enMode.Update)
+            {
+                ApplyCurrentUpdate();
+                ResetMode();
+            }
+
             lstCourses.Remove(card.Course);
             flbCourseList.Controls.Remove(card);
 
@@ -418,12 +472,18 @@ namespace GPA_CALCULATOR
             _Student._GPA.NewCumuGPA = CalculateCGPA();
         }
 
+        private void SetIssentialInfo()
+        {
+            _Student._GPA.PrevCumuGPA = Convert.ToDouble(tbCumuGPA.Text);
+            _Student.CompletedHours = Convert.ToByte(nudCompletedHours.Value);
+        }
+
         private void CalculateGPA()
         {
             if (IsStudentInfoInComplete()) return;
 
-            _Student._GPA.PrevCumuGPA = Convert.ToDouble(tbCumuGPA.Text);
-            _Student.CompletedHours = Convert.ToByte(nudCompletedHours.Value);
+            SetIssentialInfo();
+
             SetGPAData();
 
             UpdateStatistics();
@@ -434,5 +494,33 @@ namespace GPA_CALCULATOR
         {
             CalculateGPA();
         }
+
+        private void SetTargetGPAData()
+        {
+            _Student._GPA.TotalGradePoints = CalculateTotalGradePoints();
+            _Student._GPA.ReqCumuGPAPoints= CalculateReqCumuGPAPoints();
+            _Student._GPA.ReqGPAPoints= CalculateReqGPAPoints();
+            _Student._GPA.ReqGPA = CalculateReqGPA();
+        }
+
+        private void CalculateReqSemesterGPA()
+        {
+            if (IsStudentInfoInCompleteToCalcReqGPA()) return;
+
+            SetIssentialInfo();
+
+            _Student.TargetSemsterHours = Convert.ToByte(nudSemsHoursTCGPA.Value);
+            _Student._GPA.ReqCumuGPA=Convert.ToDouble(tbTargetCGPA.Text);
+
+            SetTargetGPAData();
+
+            UpdateStatistics();
+        }
+
+        private void btnCalcReqCGPA_Click(object sender, EventArgs e)
+        {
+            CalculateReqSemesterGPA();
+        }   
     }
 }
+
