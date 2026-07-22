@@ -68,6 +68,12 @@
     <Compile Include="UC_CourseCard.Designer.cs">
       <DependentUpon>UC_CourseCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_TargetCGPA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TargetCGPA.Designer.cs">
+      <DependentUpon>uc_TargetCGPA.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="UC_CourseCard.resx">
       <DependentUpon>UC_CourseCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_TargetCGPA.resx">
+      <DependentUpon>uc_TargetCGPA.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

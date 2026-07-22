@@ -59,7 +59,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.CreditHours);
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
-            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Font = new System.Drawing.Font("Vivaldi", 8.25F);
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
@@ -68,7 +68,7 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(223)))), ((int)(((byte)(236)))));
             this.guna2ShadowPanel1.ShadowDepth = 4;
             this.guna2ShadowPanel1.ShadowShift = 2;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(471, 89);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(471, 92);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
             // lblCreditHours

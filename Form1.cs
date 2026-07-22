@@ -21,6 +21,14 @@ namespace GPA_CALCULATOR
             AP = 1, A, AM, BP, B, BM, CP, C, CM, DP, D, F
         };
 
+        public enum enStateTargtCGPA : byte
+        {
+            Achivable = 1,
+            IsAchivabled=2,
+            VerryDifficult=3,
+            Impossible = 4
+        }
+
         private enum enMode
         {
             Normal,
@@ -81,6 +89,8 @@ namespace GPA_CALCULATOR
             _Student.SemesterTotalCourse = 0;
             _Student.ThisSemesterHours = 0;
 
+            pnlCheckTargetCGPA.Controls.Clear();
+
         }
 
         private void ResetCourseInputs()
@@ -106,11 +116,17 @@ namespace GPA_CALCULATOR
             {
                 lbSemesterGPA.Text = "0.00";
             }
+        }
 
-            if(!IsStudentInfoInCompleteToCalcReqGPA())
-            {
-                lbCheckCGPA2.Text = _Student._GPA.ReqGPA.ToString("F2");
-            }
+        private void UpdateTargetCGPAStatistics()
+        {
+            enStateTargtCGPA State = SetTargetCGPAState();
+
+            uc_TargetCGPA CGPA_Card = new uc_TargetCGPA(_Student._GPA.ReqGPA
+                , _Student._GPA.ReqCumuGPA, State);
+
+            pnlCheckTargetCGPA.Controls.Clear();
+            pnlCheckTargetCGPA.Controls.Add(CGPA_Card);
         }
 
         private bool FocusInEmptyItem(Control control)
@@ -514,13 +530,31 @@ namespace GPA_CALCULATOR
 
             SetTargetGPAData();
 
-            UpdateStatistics();
+            UpdateTargetCGPAStatistics();
+        }
+
+        private enStateTargtCGPA SetTargetCGPAState()
+        {
+            if (_Student._GPA.ReqGPA >= 4)
+            {
+                return enStateTargtCGPA.Impossible;
+            }
+            else if (_Student._GPA.ReqGPA >= 3.5)
+            {
+                return enStateTargtCGPA.VerryDifficult;
+            }
+            else if (_Student._GPA.PrevCumuGPA >= _Student._GPA.ReqGPA || _Student._GPA.ReqGPA <= 0)
+            {
+                return enStateTargtCGPA.IsAchivabled;
+            }
+            else return enStateTargtCGPA.Achivable;
+
         }
 
         private void btnCalcReqCGPA_Click(object sender, EventArgs e)
         {
             CalculateReqSemesterGPA();
-        }   
+        }
     }
 }
 
