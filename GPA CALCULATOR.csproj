@@ -269,5 +269,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-gpa-calculator-50 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-501.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -135,6 +135,5 @@ namespace GPA_CALCULATOR
             UpdateRequested?.Invoke(this, EventArgs.Empty);
         }
 
-
     }
 }

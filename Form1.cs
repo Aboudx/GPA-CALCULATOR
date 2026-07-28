@@ -543,7 +543,7 @@ namespace GPA_CALCULATOR
             {
                 return enStateTargtCGPA.VerryDifficult;
             }
-            else if (_Student._GPA.PrevCumuGPA >= _Student._GPA.ReqGPA || _Student._GPA.ReqGPA <= 0)
+            else if (_Student._GPA.PrevCumuGPA >= _Student._GPA.ReqCumuGPA || _Student._GPA.ReqGPA <= 0)
             {
                 return enStateTargtCGPA.IsAchivabled;
             }
@@ -554,6 +554,37 @@ namespace GPA_CALCULATOR
         private void btnCalcReqCGPA_Click(object sender, EventArgs e)
         {
             CalculateReqSemesterGPA();
+        }
+
+        private void ResetInfo()
+        {
+
+            ResetCourseInputs();
+
+            // Course List
+            while (flbCourseList.Controls.Count > 1)
+            {
+                flbCourseList.Controls.RemoveAt(1);
+            }
+
+            lstCourses.Clear();
+
+            // Student Data
+            _Student = new stStudent();
+
+            // Statistics
+            UpdateStatistics();
+
+            // Mode
+            _CurrentMode = enMode.Normal;
+             ChangeButtonAndTittle();
+
+            tbCourseBName.Focus();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetInfo();
         }
     }
 }
