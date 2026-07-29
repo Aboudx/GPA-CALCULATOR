@@ -90,6 +90,7 @@ namespace GPA_CALCULATOR
             _Student.ThisSemesterHours = 0;
 
             pnlCheckTargetCGPA.Controls.Clear();
+            pnlNotification.Controls.Clear();
 
         }
 
@@ -102,6 +103,24 @@ namespace GPA_CALCULATOR
             tbCourseBName.Focus();
         }
 
+        private void ShowNotiFication(Image Pic, string lbTittle, string LbMessage)
+        {
+            uc_NotiFicaction Notif = new uc_NotiFicaction(Pic, lbTittle, LbMessage);
+
+            if (pnlNotification.Controls.Count > 0)
+            {
+                pnlNotification.Controls[0].Dispose();
+                pnlNotification.Controls.Clear();
+            }
+
+            pnlNotification.Controls.Add(Notif);
+
+            Notif.NotificationClosed += Notif_NotificationClosed;
+
+
+            pnlNotification.Visible = true;
+
+        }
         private void UpdateStatistics()
         {
 
@@ -115,6 +134,7 @@ namespace GPA_CALCULATOR
             if (flbCourseList.Controls.Count <= 1)//1 => Because Position (1) Have Constant Value.
             {
                 lbSemesterGPA.Text = "0.00";
+                lbCumuGPA.Text = "0.00";
             }
         }
 
@@ -337,6 +357,7 @@ namespace GPA_CALCULATOR
             UpdateStatistics();
             ResetCourseInputs();
 
+            ShowNotiFication(Properties.Resources.icons8_correct_64, "Success", "Course Added Successfully.");
         }
 
         private void ResetMode()
@@ -384,6 +405,8 @@ namespace GPA_CALCULATOR
             lstCourses[CourseIndex] = UptCard.Course;
 
             UpdateStatistics();
+            ShowNotiFication(Properties.Resources.icons8_correct_64, "Success", "Updated Successfully.");
+
         }
 
         private void DeleteCourse(UC_CourseCard card)
@@ -402,6 +425,7 @@ namespace GPA_CALCULATOR
 
 
             UpdateStatistics();
+            ShowNotiFication(Properties.Resources.icons8_error_50, "Completed", "Deleted Successfully.");
 
         }
 
@@ -496,7 +520,11 @@ namespace GPA_CALCULATOR
 
         private void CalculateGPA()
         {
-            if (IsStudentInfoInComplete()) return;
+            if (IsStudentInfoInComplete())
+            {
+                ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "Enter the Acadimic Info first..");
+                return;
+            }
 
             SetIssentialInfo();
 
@@ -521,7 +549,12 @@ namespace GPA_CALCULATOR
 
         private void CalculateReqSemesterGPA()
         {
-            if (IsStudentInfoInCompleteToCalcReqGPA()) return;
+            if (IsStudentInfoInCompleteToCalcReqGPA())
+            {
+                ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "Enter the Acadimic \n\t" +
+                    "And target CGPA Info first..");
+                return;
+            }
 
             SetIssentialInfo();
 
@@ -574,6 +607,7 @@ namespace GPA_CALCULATOR
 
             // Statistics
             UpdateStatistics();
+            ShowNotiFication(Properties.Resources.icons8_error_50, "Success", "Reset Successfully.");
 
             // Mode
             _CurrentMode = enMode.Normal;
@@ -585,6 +619,19 @@ namespace GPA_CALCULATOR
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetInfo();
+        }
+
+        private void picInfo_Click(object sender, EventArgs e)
+        {
+            frmAbout about= new frmAbout();
+            about.ShowDialog();
+        }
+
+        private void Notif_NotificationClosed(object sender, EventArgs e)
+        {
+            pnlNotification.Controls.Clear();
+            pnlNotification.Visible = false;
+            
         }
     }
 }
