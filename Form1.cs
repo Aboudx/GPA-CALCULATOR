@@ -52,7 +52,7 @@ namespace GPA_CALCULATOR
         private struct stStudent
         {
             public stGPA _GPA;
-            public byte CompletedHours;
+            public int CompletedHours;
             public byte ThisSemesterHours;
             public byte SemesterTotalCourse;
             public byte TargetSemsterHours;
@@ -341,7 +341,11 @@ namespace GPA_CALCULATOR
 
         private void AddNewCourse()
         {
-            if (IsCourseInfoIncomplete()) return;
+            if (IsCourseInfoIncomplete())
+            {
+                ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "Enter the Add Course Info first..");
+                return;
+            }
 
             stCourse Course = CreateCourse();
 
@@ -632,6 +636,93 @@ namespace GPA_CALCULATOR
             pnlNotification.Controls.Clear();
             pnlNotification.Visible = false;
             
+        }
+        private void tbCumuGPA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (e.KeyChar == '.' && !((Guna2TextBox)(sender)).Text.Contains('.'))
+                return;
+
+            e.Handled = true;
+        }
+
+        private void tbCumuGPA_TextChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox tb = (Guna2TextBox)sender;
+
+            if (double.TryParse(tb.Text, out double GPA))
+            {
+
+                if (GPA > 4)
+                {
+                    tb.Text = "4.00";
+                    tb.SelectionStart = tb.Text.Length;
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
+                        " between 0.00 and 4.00");
+                }
+            }
+        }
+        private void tbGrade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            e.Handled = true;
+        }
+
+        private void tbGrade_TextChanged(object sender, EventArgs e)
+        {
+            if(int.TryParse(tbGrade.Text,out int Grade))
+            {
+                if (Grade > 100)
+                {
+                    tbGrade.Text = "100";
+                    tbGrade.SelectionStart = tbGrade.Text.Length;
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
+                        " between 0 and 100");
+                }
+            }
+        }
+
+        private void nudCompletedHours_ValueChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(tbGrade.Text, out int Hours))
+            {
+                if (Hours > 350)
+                {
+                    tbGrade.Text = "350";
+                    tbGrade.SelectionStart = tbGrade.Text.Length;
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
+                        " between 0 and 350");
+                }
+            }
+        }
+
+        private void nudSemsHoursTCGPA_ValueChanged(object sender, EventArgs e)
+        {
+            if (Byte.TryParse(tbGrade.Text, out byte Credits))
+            {
+                if (Credits > 100)
+                {
+                    tbGrade.Text = "100";
+                    tbGrade.SelectionStart = tbGrade.Text.Length;
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
+                        " between 0 and 24");
+                }
+            }
         }
     }
 }

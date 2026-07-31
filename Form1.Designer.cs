@@ -32,21 +32,32 @@
             this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlTittle = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlInfo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.picInfo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.nudCompletedHours = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.tbCumuGPA = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlAddNewCourse = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnAddCourse = new Guna.UI2.WinForms.Guna2Button();
+            this.TittleAddOrUpdate = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbCreditHours = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tbGrade = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbCourseBName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,19 +66,29 @@
             this.lbTotalCourse = new System.Windows.Forms.Label();
             this.lbTotalCredit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCourseName = new System.Windows.Forms.Label();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCalculate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlCheckTargetCGPA = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnCalcReqCGPA = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox16 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.nudSemsHoursTCGPA = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
+            this.guna2PictureBox15 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbTargetCGPA = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox14 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flbCourseList = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
             this.ToolTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlSummury = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlNotification = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -78,75 +99,54 @@
             this.lbSemesterGPA = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lblAcadYear = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCalculate = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox16 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox15 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbTargetCGPA = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox14 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbCumuGPA = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnAddCourse = new Guna.UI2.WinForms.Guna2Button();
-            this.TittleAddOrUpdate = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tbGrade = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbCourseBName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picInfo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblAcadYear = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlHeader.SuspendLayout();
             this.pnlTittle.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlInfo.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlLeft.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCompletedHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.pnlAddNewCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).BeginInit();
             this.pnlRight.SuspendLayout();
             this.guna2ShadowPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSemsHoursTCGPA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).BeginInit();
             this.guna2ShadowPanel3.SuspendLayout();
             this.flbCourseList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.pnlContent.SuspendLayout();
             this.guna2ShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             this.pnlSummury.SuspendLayout();
             this.guna2ShadowPanel6.SuspendLayout();
             this.guna2ShadowPanel9.SuspendLayout();
-            this.guna2ShadowPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2ShadowPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -190,6 +190,18 @@
             this.guna2Panel3.Size = new System.Drawing.Size(492, 120);
             this.guna2Panel3.TabIndex = 4;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox2.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_050727;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(492, 120);
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -222,6 +234,20 @@
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(86, 60);
             this.guna2Panel7.TabIndex = 8;
+            // 
+            // picInfo
+            // 
+            this.picInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picInfo.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_50;
+            this.picInfo.ImageRotate = 0F;
+            this.picInfo.Location = new System.Drawing.Point(0, 0);
+            this.picInfo.Name = "picInfo";
+            this.picInfo.Size = new System.Drawing.Size(86, 60);
+            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picInfo.TabIndex = 32;
+            this.picInfo.TabStop = false;
+            this.picInfo.Click += new System.EventHandler(this.picInfo_Click);
             // 
             // guna2Panel2
             // 
@@ -269,6 +295,21 @@
             this.pnlLogo.Size = new System.Drawing.Size(250, 120);
             this.pnlLogo.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(250, 114);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // pnlLeft
             // 
             this.pnlLeft.BackColor = System.Drawing.Color.Transparent;
@@ -303,6 +344,18 @@
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(289, 96);
             this.guna2ShadowPanel2.TabIndex = 1;
             // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox6.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(253, 39);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(16, 14);
+            this.guna2PictureBox6.TabIndex = 30;
+            this.guna2PictureBox6.TabStop = false;
+            this.ToolTip.SetToolTip(this.guna2PictureBox6, "Enter your current Completed Hours before adding this semester\'s courses.");
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -312,6 +365,18 @@
             this.label5.Size = new System.Drawing.Size(116, 17);
             this.label5.TabIndex = 29;
             this.label5.Text = "Completed Hours";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox5.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(108, 39);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(16, 14);
+            this.guna2PictureBox5.TabIndex = 28;
+            this.guna2PictureBox5.TabStop = false;
+            this.ToolTip.SetToolTip(this.guna2PictureBox5, "Enter your current cumulative GPA before adding this semester\'s courses.");
             // 
             // nudCompletedHours
             // 
@@ -329,7 +394,7 @@
             this.nudCompletedHours.Location = new System.Drawing.Point(153, 55);
             this.nudCompletedHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudCompletedHours.Maximum = new decimal(new int[] {
-            300,
+            350,
             0,
             0,
             0});
@@ -338,6 +403,34 @@
             this.nudCompletedHours.TabIndex = 27;
             this.nudCompletedHours.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.nudCompletedHours.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.nudCompletedHours.ValueChanged += new System.EventHandler(this.nudCompletedHours_ValueChanged);
+            // 
+            // tbCumuGPA
+            // 
+            this.tbCumuGPA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.tbCumuGPA.BorderRadius = 10;
+            this.tbCumuGPA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCumuGPA.DefaultText = "";
+            this.tbCumuGPA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbCumuGPA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbCumuGPA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCumuGPA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCumuGPA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.tbCumuGPA.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCumuGPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.tbCumuGPA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCumuGPA.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_32;
+            this.tbCumuGPA.Location = new System.Drawing.Point(42, 55);
+            this.tbCumuGPA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbCumuGPA.Name = "tbCumuGPA";
+            this.tbCumuGPA.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.tbCumuGPA.PlaceholderText = "GPA";
+            this.tbCumuGPA.SelectedText = "";
+            this.tbCumuGPA.Size = new System.Drawing.Size(92, 31);
+            this.tbCumuGPA.TabIndex = 26;
+            this.tbCumuGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCumuGPA.TextChanged += new System.EventHandler(this.tbCumuGPA_TextChanged);
+            this.tbCumuGPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCumuGPA_KeyPress);
             // 
             // label4
             // 
@@ -348,6 +441,16 @@
             this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 25;
             this.label4.Text = "Cumulative GPA";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_162344;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(42, 6);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(200, 54);
+            this.guna2PictureBox4.TabIndex = 23;
+            this.guna2PictureBox4.TabStop = false;
             // 
             // pnlAddNewCourse
             // 
@@ -373,6 +476,38 @@
             this.pnlAddNewCourse.ShadowShift = 2;
             this.pnlAddNewCourse.Size = new System.Drawing.Size(289, 257);
             this.pnlAddNewCourse.TabIndex = 0;
+            // 
+            // btnAddCourse
+            // 
+            this.btnAddCourse.Animated = true;
+            this.btnAddCourse.BorderRadius = 12;
+            this.btnAddCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnAddCourse.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnAddCourse.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
+            this.btnAddCourse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnAddCourse.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_plus_24;
+            this.btnAddCourse.Location = new System.Drawing.Point(42, 214);
+            this.btnAddCourse.Name = "btnAddCourse";
+            this.btnAddCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnAddCourse.Size = new System.Drawing.Size(224, 37);
+            this.btnAddCourse.TabIndex = 23;
+            this.btnAddCourse.Text = "Add Course";
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddNewAndEditCourse_Click);
+            // 
+            // TittleAddOrUpdate
+            // 
+            this.TittleAddOrUpdate.Image = global::GPA_CALCULATOR.Properties.Resources.AddNewCourseImage;
+            this.TittleAddOrUpdate.ImageRotate = 0F;
+            this.TittleAddOrUpdate.Location = new System.Drawing.Point(23, 9);
+            this.TittleAddOrUpdate.Name = "TittleAddOrUpdate";
+            this.TittleAddOrUpdate.Size = new System.Drawing.Size(209, 54);
+            this.TittleAddOrUpdate.TabIndex = 22;
+            this.TittleAddOrUpdate.TabStop = false;
             // 
             // cbCreditHours
             // 
@@ -400,6 +535,56 @@
             this.cbCreditHours.Name = "cbCreditHours";
             this.cbCreditHours.Size = new System.Drawing.Size(107, 36);
             this.cbCreditHours.TabIndex = 21;
+            // 
+            // tbGrade
+            // 
+            this.tbGrade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.tbGrade.BorderRadius = 10;
+            this.tbGrade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbGrade.DefaultText = "";
+            this.tbGrade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbGrade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbGrade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGrade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.tbGrade.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.tbGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbGrade.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_grade_48;
+            this.tbGrade.Location = new System.Drawing.Point(42, 171);
+            this.tbGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbGrade.Name = "tbGrade";
+            this.tbGrade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.tbGrade.PlaceholderText = "";
+            this.tbGrade.SelectedText = "";
+            this.tbGrade.Size = new System.Drawing.Size(107, 36);
+            this.tbGrade.TabIndex = 19;
+            this.tbGrade.TextChanged += new System.EventHandler(this.tbGrade_TextChanged);
+            this.tbGrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGrade_KeyPress);
+            // 
+            // tbCourseBName
+            // 
+            this.tbCourseBName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.tbCourseBName.BorderRadius = 10;
+            this.tbCourseBName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCourseBName.DefaultText = "";
+            this.tbCourseBName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbCourseBName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbCourseBName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCourseBName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCourseBName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.tbCourseBName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCourseBName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.tbCourseBName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCourseBName.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_open_book_24;
+            this.tbCourseBName.Location = new System.Drawing.Point(42, 90);
+            this.tbCourseBName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbCourseBName.Name = "tbCourseBName";
+            this.tbCourseBName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.tbCourseBName.PlaceholderText = "Enter course name";
+            this.tbCourseBName.SelectedText = "";
+            this.tbCourseBName.Size = new System.Drawing.Size(214, 42);
+            this.tbCourseBName.TabIndex = 18;
             // 
             // label3
             // 
@@ -455,6 +640,7 @@
             this.guna2ShadowPanel4.Controls.Add(this.guna2PictureBox9);
             this.guna2ShadowPanel4.Controls.Add(this.lblCourseName);
             this.guna2ShadowPanel4.Controls.Add(this.guna2PictureBox8);
+            this.guna2ShadowPanel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2ShadowPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2ShadowPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.guna2ShadowPanel4.Location = new System.Drawing.Point(0, 269);
@@ -499,6 +685,17 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Total Credit Hours ";
             // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox9.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_clock_32;
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(191, 4);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(34, 29);
+            this.guna2PictureBox9.TabIndex = 28;
+            this.guna2PictureBox9.TabStop = false;
+            // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
@@ -509,6 +706,17 @@
             this.lblCourseName.Size = new System.Drawing.Size(91, 20);
             this.lblCourseName.TabIndex = 27;
             this.lblCourseName.Text = "Total Course";
+            // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox8.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_page_26;
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(13, 4);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(34, 29);
+            this.guna2PictureBox8.TabIndex = 0;
+            this.guna2PictureBox8.TabStop = false;
             // 
             // guna2ShadowPanel1
             // 
@@ -527,6 +735,50 @@
             this.guna2ShadowPanel1.ShadowShift = 2;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(436, 47);
             this.guna2ShadowPanel1.TabIndex = 32;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Animated = true;
+            this.btnReset.BorderRadius = 12;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnReset.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_reset_64;
+            this.btnReset.Location = new System.Drawing.Point(43, 4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnReset.Size = new System.Drawing.Size(112, 37);
+            this.btnReset.TabIndex = 25;
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Animated = true;
+            this.btnCalculate.BorderRadius = 12;
+            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalculate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalculate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalculate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnCalculate.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCalculate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnCalculate.ForeColor = System.Drawing.Color.White;
+            this.btnCalculate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnCalculate.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_calculator_24;
+            this.btnCalculate.Location = new System.Drawing.Point(186, 4);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnCalculate.Size = new System.Drawing.Size(224, 37);
+            this.btnCalculate.TabIndex = 24;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // guna2ShadowPanel10
             // 
@@ -589,6 +841,18 @@
             this.btnCalcReqCGPA.Text = "Calculate Required CGPA";
             this.btnCalcReqCGPA.Click += new System.EventHandler(this.btnCalcReqCGPA_Click);
             // 
+            // guna2PictureBox16
+            // 
+            this.guna2PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox16.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
+            this.guna2PictureBox16.ImageRotate = 0F;
+            this.guna2PictureBox16.Location = new System.Drawing.Point(152, 142);
+            this.guna2PictureBox16.Name = "guna2PictureBox16";
+            this.guna2PictureBox16.Size = new System.Drawing.Size(16, 14);
+            this.guna2PictureBox16.TabIndex = 38;
+            this.guna2PictureBox16.TabStop = false;
+            this.ToolTip.SetToolTip(this.guna2PictureBox16, "Enter your Semester Credit Hours");
+            // 
             // nudSemsHoursTCGPA
             // 
             this.nudSemsHoursTCGPA.BackColor = System.Drawing.Color.Transparent;
@@ -605,7 +869,7 @@
             this.nudSemsHoursTCGPA.Location = new System.Drawing.Point(20, 165);
             this.nudSemsHoursTCGPA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudSemsHoursTCGPA.Maximum = new decimal(new int[] {
-            300,
+            24,
             0,
             0,
             0});
@@ -614,6 +878,7 @@
             this.nudSemsHoursTCGPA.TabIndex = 37;
             this.nudSemsHoursTCGPA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(253)))));
             this.nudSemsHoursTCGPA.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.nudSemsHoursTCGPA.ValueChanged += new System.EventHandler(this.nudSemsHoursTCGPA_ValueChanged);
             // 
             // label10
             // 
@@ -625,6 +890,18 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "Semester Credit Hours";
             // 
+            // guna2PictureBox15
+            // 
+            this.guna2PictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox15.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
+            this.guna2PictureBox15.ImageRotate = 0F;
+            this.guna2PictureBox15.Location = new System.Drawing.Point(96, 79);
+            this.guna2PictureBox15.Name = "guna2PictureBox15";
+            this.guna2PictureBox15.Size = new System.Drawing.Size(16, 14);
+            this.guna2PictureBox15.TabIndex = 35;
+            this.guna2PictureBox15.TabStop = false;
+            this.ToolTip.SetToolTip(this.guna2PictureBox15, "Enter your Target CGPA");
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -634,6 +911,43 @@
             this.label7.Size = new System.Drawing.Size(84, 17);
             this.label7.TabIndex = 34;
             this.label7.Text = "Target CGPA";
+            // 
+            // tbTargetCGPA
+            // 
+            this.tbTargetCGPA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.tbTargetCGPA.BorderRadius = 10;
+            this.tbTargetCGPA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbTargetCGPA.DefaultText = "";
+            this.tbTargetCGPA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbTargetCGPA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbTargetCGPA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbTargetCGPA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbTargetCGPA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.tbTargetCGPA.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTargetCGPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.tbTargetCGPA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbTargetCGPA.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_32;
+            this.tbTargetCGPA.Location = new System.Drawing.Point(23, 100);
+            this.tbTargetCGPA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbTargetCGPA.Name = "tbTargetCGPA";
+            this.tbTargetCGPA.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.tbTargetCGPA.PlaceholderText = "CGPA";
+            this.tbTargetCGPA.SelectedText = "";
+            this.tbTargetCGPA.Size = new System.Drawing.Size(221, 31);
+            this.tbTargetCGPA.TabIndex = 33;
+            this.tbTargetCGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbTargetCGPA.TextChanged += new System.EventHandler(this.tbCumuGPA_TextChanged);
+            this.tbTargetCGPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCumuGPA_KeyPress);
+            // 
+            // guna2PictureBox14
+            // 
+            this.guna2PictureBox14.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_13_042410;
+            this.guna2PictureBox14.ImageRotate = 0F;
+            this.guna2PictureBox14.Location = new System.Drawing.Point(6, 23);
+            this.guna2PictureBox14.Name = "guna2PictureBox14";
+            this.guna2PictureBox14.Size = new System.Drawing.Size(255, 47);
+            this.guna2PictureBox14.TabIndex = 31;
+            this.guna2PictureBox14.TabStop = false;
             // 
             // guna2ShadowPanel3
             // 
@@ -667,6 +981,16 @@
             this.flbCourseList.Size = new System.Drawing.Size(396, 227);
             this.flbCourseList.TabIndex = 23;
             this.flbCourseList.WrapContents = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_173127;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(18, 18);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(149, 45);
+            this.guna2PictureBox7.TabIndex = 30;
+            this.guna2PictureBox7.TabStop = false;
             // 
             // pnlContent
             // 
@@ -703,6 +1027,17 @@
             this.guna2ShadowPanel5.ShadowShift = 2;
             this.guna2ShadowPanel5.Size = new System.Drawing.Size(102, 74);
             this.guna2ShadowPanel5.TabIndex = 24;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox10.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_50;
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(27, 10);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(56, 50);
+            this.guna2PictureBox10.TabIndex = 24;
+            this.guna2PictureBox10.TabStop = false;
             // 
             // pnlSummury
             // 
@@ -853,318 +1188,6 @@
             this.guna2ShadowPanel9.Size = new System.Drawing.Size(102, 74);
             this.guna2ShadowPanel9.TabIndex = 38;
             // 
-            // guna2ShadowPanel7
-            // 
-            this.guna2ShadowPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel7.Controls.Add(this.guna2PictureBox11);
-            this.guna2ShadowPanel7.EdgeWidth = 1;
-            this.guna2ShadowPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2ShadowPanel7.Location = new System.Drawing.Point(342, 12);
-            this.guna2ShadowPanel7.Name = "guna2ShadowPanel7";
-            this.guna2ShadowPanel7.Radius = 10;
-            this.guna2ShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.guna2ShadowPanel7.ShadowDepth = 35;
-            this.guna2ShadowPanel7.ShadowShift = 2;
-            this.guna2ShadowPanel7.Size = new System.Drawing.Size(102, 74);
-            this.guna2ShadowPanel7.TabIndex = 25;
-            // 
-            // lblAcadYear
-            // 
-            this.lblAcadYear.BackColor = System.Drawing.Color.Transparent;
-            this.lblAcadYear.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcadYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.lblAcadYear.Location = new System.Drawing.Point(10, 13);
-            this.lblAcadYear.Name = "lblAcadYear";
-            this.lblAcadYear.Size = new System.Drawing.Size(93, 22);
-            this.lblAcadYear.TabIndex = 1;
-            this.lblAcadYear.Text = "Developed by";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 38);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(178, 23);
-            this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "Abdullatif Al-Muhammad";
-            // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox9.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_clock_32;
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(191, 4);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(34, 29);
-            this.guna2PictureBox9.TabIndex = 28;
-            this.guna2PictureBox9.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox8.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_page_26;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(13, 4);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(34, 29);
-            this.guna2PictureBox8.TabIndex = 0;
-            this.guna2PictureBox8.TabStop = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Animated = true;
-            this.btnReset.BorderRadius = 12;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
-            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
-            this.btnReset.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_reset_64;
-            this.btnReset.Location = new System.Drawing.Point(43, 4);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
-            this.btnReset.Size = new System.Drawing.Size(112, 37);
-            this.btnReset.TabIndex = 25;
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnCalculate
-            // 
-            this.btnCalculate.Animated = true;
-            this.btnCalculate.BorderRadius = 12;
-            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCalculate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCalculate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
-            this.btnCalculate.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCalculate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.btnCalculate.ForeColor = System.Drawing.Color.White;
-            this.btnCalculate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
-            this.btnCalculate.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_calculator_24;
-            this.btnCalculate.Location = new System.Drawing.Point(186, 4);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
-            this.btnCalculate.Size = new System.Drawing.Size(224, 37);
-            this.btnCalculate.TabIndex = 24;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
-            // 
-            // guna2PictureBox16
-            // 
-            this.guna2PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox16.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
-            this.guna2PictureBox16.ImageRotate = 0F;
-            this.guna2PictureBox16.Location = new System.Drawing.Point(152, 142);
-            this.guna2PictureBox16.Name = "guna2PictureBox16";
-            this.guna2PictureBox16.Size = new System.Drawing.Size(16, 14);
-            this.guna2PictureBox16.TabIndex = 38;
-            this.guna2PictureBox16.TabStop = false;
-            this.ToolTip.SetToolTip(this.guna2PictureBox16, "Enter your Semester Credit Hours");
-            // 
-            // guna2PictureBox15
-            // 
-            this.guna2PictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox15.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
-            this.guna2PictureBox15.ImageRotate = 0F;
-            this.guna2PictureBox15.Location = new System.Drawing.Point(96, 79);
-            this.guna2PictureBox15.Name = "guna2PictureBox15";
-            this.guna2PictureBox15.Size = new System.Drawing.Size(16, 14);
-            this.guna2PictureBox15.TabIndex = 35;
-            this.guna2PictureBox15.TabStop = false;
-            this.ToolTip.SetToolTip(this.guna2PictureBox15, "Enter your Target CGPA");
-            // 
-            // tbTargetCGPA
-            // 
-            this.tbTargetCGPA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
-            this.tbTargetCGPA.BorderRadius = 10;
-            this.tbTargetCGPA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTargetCGPA.DefaultText = "";
-            this.tbTargetCGPA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbTargetCGPA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbTargetCGPA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTargetCGPA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTargetCGPA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.tbTargetCGPA.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTargetCGPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.tbTargetCGPA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTargetCGPA.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_32;
-            this.tbTargetCGPA.Location = new System.Drawing.Point(23, 100);
-            this.tbTargetCGPA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbTargetCGPA.Name = "tbTargetCGPA";
-            this.tbTargetCGPA.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.tbTargetCGPA.PlaceholderText = "CGPA";
-            this.tbTargetCGPA.SelectedText = "";
-            this.tbTargetCGPA.Size = new System.Drawing.Size(221, 31);
-            this.tbTargetCGPA.TabIndex = 33;
-            this.tbTargetCGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2PictureBox14
-            // 
-            this.guna2PictureBox14.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_13_042410;
-            this.guna2PictureBox14.ImageRotate = 0F;
-            this.guna2PictureBox14.Location = new System.Drawing.Point(6, 23);
-            this.guna2PictureBox14.Name = "guna2PictureBox14";
-            this.guna2PictureBox14.Size = new System.Drawing.Size(255, 47);
-            this.guna2PictureBox14.TabIndex = 31;
-            this.guna2PictureBox14.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_173127;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(18, 18);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(149, 45);
-            this.guna2PictureBox7.TabIndex = 30;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox6.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(253, 39);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(16, 14);
-            this.guna2PictureBox6.TabIndex = 30;
-            this.guna2PictureBox6.TabStop = false;
-            this.ToolTip.SetToolTip(this.guna2PictureBox6, "Enter your current Completed Hours before adding this semester\'s courses.");
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox5.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_16__1_;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(108, 39);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(16, 14);
-            this.guna2PictureBox5.TabIndex = 28;
-            this.guna2PictureBox5.TabStop = false;
-            this.ToolTip.SetToolTip(this.guna2PictureBox5, "Enter your current cumulative GPA before adding this semester\'s courses.");
-            // 
-            // tbCumuGPA
-            // 
-            this.tbCumuGPA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
-            this.tbCumuGPA.BorderRadius = 10;
-            this.tbCumuGPA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCumuGPA.DefaultText = "";
-            this.tbCumuGPA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCumuGPA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCumuGPA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCumuGPA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCumuGPA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.tbCumuGPA.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCumuGPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.tbCumuGPA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCumuGPA.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_32;
-            this.tbCumuGPA.Location = new System.Drawing.Point(42, 55);
-            this.tbCumuGPA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbCumuGPA.Name = "tbCumuGPA";
-            this.tbCumuGPA.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.tbCumuGPA.PlaceholderText = "GPA";
-            this.tbCumuGPA.SelectedText = "";
-            this.tbCumuGPA.Size = new System.Drawing.Size(92, 31);
-            this.tbCumuGPA.TabIndex = 26;
-            this.tbCumuGPA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_162344;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(42, 6);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(200, 54);
-            this.guna2PictureBox4.TabIndex = 23;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // btnAddCourse
-            // 
-            this.btnAddCourse.Animated = true;
-            this.btnAddCourse.BorderRadius = 12;
-            this.btnAddCourse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
-            this.btnAddCourse.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.btnAddCourse.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
-            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
-            this.btnAddCourse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
-            this.btnAddCourse.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_plus_24;
-            this.btnAddCourse.Location = new System.Drawing.Point(42, 214);
-            this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
-            this.btnAddCourse.Size = new System.Drawing.Size(224, 37);
-            this.btnAddCourse.TabIndex = 23;
-            this.btnAddCourse.Text = "Add Course";
-            this.btnAddCourse.Click += new System.EventHandler(this.btnAddNewAndEditCourse_Click);
-            // 
-            // TittleAddOrUpdate
-            // 
-            this.TittleAddOrUpdate.Image = global::GPA_CALCULATOR.Properties.Resources.AddNewCourseImage;
-            this.TittleAddOrUpdate.ImageRotate = 0F;
-            this.TittleAddOrUpdate.Location = new System.Drawing.Point(23, 9);
-            this.TittleAddOrUpdate.Name = "TittleAddOrUpdate";
-            this.TittleAddOrUpdate.Size = new System.Drawing.Size(209, 54);
-            this.TittleAddOrUpdate.TabIndex = 22;
-            this.TittleAddOrUpdate.TabStop = false;
-            // 
-            // tbGrade
-            // 
-            this.tbGrade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
-            this.tbGrade.BorderRadius = 10;
-            this.tbGrade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbGrade.DefaultText = "";
-            this.tbGrade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbGrade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbGrade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbGrade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.tbGrade.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.tbGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbGrade.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_grade_48;
-            this.tbGrade.Location = new System.Drawing.Point(42, 171);
-            this.tbGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbGrade.Name = "tbGrade";
-            this.tbGrade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.tbGrade.PlaceholderText = "";
-            this.tbGrade.SelectedText = "";
-            this.tbGrade.Size = new System.Drawing.Size(107, 36);
-            this.tbGrade.TabIndex = 19;
-            // 
-            // tbCourseBName
-            // 
-            this.tbCourseBName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
-            this.tbCourseBName.BorderRadius = 10;
-            this.tbCourseBName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCourseBName.DefaultText = "";
-            this.tbCourseBName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCourseBName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCourseBName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCourseBName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCourseBName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.tbCourseBName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCourseBName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.tbCourseBName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCourseBName.IconLeft = global::GPA_CALCULATOR.Properties.Resources.icons8_open_book_24;
-            this.tbCourseBName.Location = new System.Drawing.Point(42, 90);
-            this.tbCourseBName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbCourseBName.Name = "tbCourseBName";
-            this.tbCourseBName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.tbCourseBName.PlaceholderText = "Enter course name";
-            this.tbCourseBName.SelectedText = "";
-            this.tbCourseBName.Size = new System.Drawing.Size(214, 42);
-            this.tbCourseBName.TabIndex = 18;
-            // 
             // guna2PictureBox12
             // 
             this.guna2PictureBox12.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1197,6 +1220,22 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
+            // guna2ShadowPanel7
+            // 
+            this.guna2ShadowPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel7.Controls.Add(this.guna2PictureBox11);
+            this.guna2ShadowPanel7.EdgeWidth = 1;
+            this.guna2ShadowPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2ShadowPanel7.Location = new System.Drawing.Point(342, 12);
+            this.guna2ShadowPanel7.Name = "guna2ShadowPanel7";
+            this.guna2ShadowPanel7.Radius = 10;
+            this.guna2ShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.guna2ShadowPanel7.ShadowDepth = 35;
+            this.guna2ShadowPanel7.ShadowShift = 2;
+            this.guna2ShadowPanel7.Size = new System.Drawing.Size(102, 74);
+            this.guna2ShadowPanel7.TabIndex = 25;
+            // 
             // guna2PictureBox11
             // 
             this.guna2PictureBox11.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_50__1_;
@@ -1207,57 +1246,27 @@
             this.guna2PictureBox11.TabIndex = 24;
             this.guna2PictureBox11.TabStop = false;
             // 
-            // guna2PictureBox10
+            // lblAcadYear
             // 
-            this.guna2PictureBox10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox10.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_gpa_calculator_50;
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(27, 10);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(56, 50);
-            this.guna2PictureBox10.TabIndex = 24;
-            this.guna2PictureBox10.TabStop = false;
+            this.lblAcadYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblAcadYear.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcadYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.lblAcadYear.Location = new System.Drawing.Point(10, 13);
+            this.lblAcadYear.Name = "lblAcadYear";
+            this.lblAcadYear.Size = new System.Drawing.Size(93, 22);
+            this.lblAcadYear.TabIndex = 1;
+            this.lblAcadYear.Text = "Developed by";
             // 
-            // guna2PictureBox2
+            // guna2HtmlLabel1
             // 
-            this.guna2PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.guna2PictureBox2.Image = global::GPA_CALCULATOR.Properties.Resources.Screenshot_2026_07_12_050727;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(63, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(410, 114);
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // picInfo
-            // 
-            this.picInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInfo.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_50;
-            this.picInfo.ImageRotate = 0F;
-            this.picInfo.Location = new System.Drawing.Point(0, 0);
-            this.picInfo.Name = "picInfo";
-            this.picInfo.Size = new System.Drawing.Size(86, 60);
-            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picInfo.TabIndex = 32;
-            this.picInfo.TabStop = false;
-            this.picInfo.Click += new System.EventHandler(this.picInfo_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(250, 114);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 38);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(178, 23);
+            this.guna2HtmlLabel1.TabIndex = 3;
+            this.guna2HtmlLabel1.Text = "Abdullatif Al-Muhammad";
             // 
             // frmMain
             // 
@@ -1278,49 +1287,49 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlTittle.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.pnlInfo.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlLeft.ResumeLayout(false);
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCompletedHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.pnlAddNewCourse.ResumeLayout(false);
             this.pnlAddNewCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).EndInit();
             this.pnlRight.ResumeLayout(false);
             this.guna2ShadowPanel4.ResumeLayout(false);
             this.guna2ShadowPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel10.ResumeLayout(false);
             this.guna2ShadowPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSemsHoursTCGPA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).EndInit();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.flbCourseList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             this.pnlContent.ResumeLayout(false);
             this.guna2ShadowPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
             this.pnlSummury.ResumeLayout(false);
             this.guna2ShadowPanel6.ResumeLayout(false);
             this.guna2ShadowPanel6.PerformLayout();
             this.guna2ShadowPanel9.ResumeLayout(false);
-            this.guna2ShadowPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TittleAddOrUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2ShadowPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
