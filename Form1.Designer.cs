@@ -688,7 +688,6 @@
             // guna2PictureBox9
             // 
             this.guna2PictureBox9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox9.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_clock_32;
             this.guna2PictureBox9.ImageRotate = 0F;
             this.guna2PictureBox9.Location = new System.Drawing.Point(191, 4);
             this.guna2PictureBox9.Name = "guna2PictureBox9";

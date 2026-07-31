@@ -83,16 +83,6 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GitHub_Logo {
-            get {
-                object obj = ResourceManager.GetObject("GitHub Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_book_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-book-24", resourceCulture);
@@ -106,16 +96,6 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap icons8_calculator_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-calculator-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_clock_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-clock-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,16 +246,6 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap icons8_grade_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-grade-48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_graduate_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-graduate-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,16 +456,6 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_07_12_184758 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-07-12 184758", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2026_07_12_204713 {
-            get {
-                object obj = ResourceManager.GetObject("Screenshot 2026-07-12 204713", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

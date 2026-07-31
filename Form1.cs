@@ -339,11 +339,22 @@ namespace GPA_CALCULATOR
             return course;
         }
 
+        private bool CoursesIsFull()
+        {
+            return flbCourseList.Controls.Count > 10;
+        }
+
         private void AddNewCourse()
         {
             if (IsCourseInfoIncomplete())
             {
                 ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "Enter the Add Course Info first..");
+                return;
+            }
+
+            if(CoursesIsFull())
+            {
+                ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "They cannot be more than 10");
                 return;
             }
 
