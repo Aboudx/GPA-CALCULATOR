@@ -83,6 +83,26 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ararbic_Guide {
+            get {
+                object obj = ResourceManager.GetObject("Ararbic Guide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap English_Guide_Final {
+            get {
+                object obj = ResourceManager.GetObject("English Guide Final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_book_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-book-24", resourceCulture);
@@ -96,6 +116,16 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap icons8_calculator_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-calculator-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clock_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-clock-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +283,16 @@ namespace GPA_CALCULATOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_guide_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-guide-32 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_info_16__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-info-16 (1)", resourceCulture);
@@ -266,6 +306,16 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap icons8_info_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-info-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_50__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-50 (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +516,26 @@ namespace GPA_CALCULATOR.Properties {
         internal static System.Drawing.Bitmap Screenshot_2026_07_13_042410 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2026-07-13 042410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_08_03_172047 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-08-03 172047", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_08_03_172343 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-08-03 172343", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

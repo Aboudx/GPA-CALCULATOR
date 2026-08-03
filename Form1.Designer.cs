@@ -36,9 +36,10 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlInfo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.picInfo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnGuide = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
@@ -112,7 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlInfo.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
+            this.guna2Panel6.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlLeft.SuspendLayout();
@@ -227,7 +228,7 @@
             // 
             // guna2Panel7
             // 
-            this.guna2Panel7.Controls.Add(this.picInfo);
+            this.guna2Panel7.Controls.Add(this.btnInfo);
             this.guna2Panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel7.Location = new System.Drawing.Point(82, 30);
@@ -235,19 +236,26 @@
             this.guna2Panel7.Size = new System.Drawing.Size(86, 60);
             this.guna2Panel7.TabIndex = 8;
             // 
-            // picInfo
+            // btnInfo
             // 
-            this.picInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInfo.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_50;
-            this.picInfo.ImageRotate = 0F;
-            this.picInfo.Location = new System.Drawing.Point(0, 0);
-            this.picInfo.Name = "picInfo";
-            this.picInfo.Size = new System.Drawing.Size(86, 60);
-            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picInfo.TabIndex = 32;
-            this.picInfo.TabStop = false;
-            this.picInfo.Click += new System.EventHandler(this.picInfo_Click);
+            this.btnInfo.Animated = true;
+            this.btnInfo.BorderRadius = 24;
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnInfo.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnInfo.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_info_50__3_;
+            this.btnInfo.Location = new System.Drawing.Point(29, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnInfo.Size = new System.Drawing.Size(48, 48);
+            this.btnInfo.TabIndex = 27;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // guna2Panel2
             // 
@@ -260,12 +268,34 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Controls.Add(this.btnGuide);
             this.guna2Panel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel6.Location = new System.Drawing.Point(168, 30);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(82, 60);
             this.guna2Panel6.TabIndex = 6;
+            // 
+            // btnGuide
+            // 
+            this.btnGuide.Animated = true;
+            this.btnGuide.BorderRadius = 24;
+            this.btnGuide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuide.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(199)))), ((int)(((byte)(222)))));
+            this.btnGuide.DisabledState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGuide.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.btnGuide.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F);
+            this.btnGuide.ForeColor = System.Drawing.Color.White;
+            this.btnGuide.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(194)))));
+            this.btnGuide.Image = global::GPA_CALCULATOR.Properties.Resources.icons8_guide_32__1_;
+            this.btnGuide.Location = new System.Drawing.Point(5, 6);
+            this.btnGuide.Name = "btnGuide";
+            this.btnGuide.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(62)))), ((int)(((byte)(130)))));
+            this.btnGuide.Size = new System.Drawing.Size(48, 48);
+            this.btnGuide.TabIndex = 27;
+            this.btnGuide.Click += new System.EventHandler(this.btnGuide_Click);
             // 
             // guna2Panel5
             // 
@@ -1289,7 +1319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.pnlInfo.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
+            this.guna2Panel6.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlLeft.ResumeLayout(false);
@@ -1405,12 +1435,13 @@
         private Guna.UI2.WinForms.Guna2Button btnCalcReqCGPA;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlCheckTargetCGPA;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2PictureBox picInfo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlNotification;
+        private Guna.UI2.WinForms.Guna2Button btnInfo;
+        private Guna.UI2.WinForms.Guna2Button btnGuide;
     }
 }
 

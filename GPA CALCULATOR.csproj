@@ -69,6 +69,12 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuide.Designer.cs">
+      <DependentUpon>frmGuide.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC_CourseCard.cs">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGuide.resx">
+      <DependentUpon>frmGuide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -319,6 +328,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GPA Calc Icon.ico" />
+    <None Include="Resources\English Guide Final.png" />
+    <None Include="Resources\Ararbic Guide.png" />
+    <None Include="Resources\English Guide.png" />
+    <None Include="Resources\Screenshot 2026-08-03 172343.png" />
+    <None Include="Resources\Screenshot 2026-08-03 172047.png" />
+    <None Include="Resources\icons8-info-50 %283%29.png" />
+    <None Include="Resources\icons8-info-50 %282%29.png" />
+    <None Include="Resources\icons8-info-50 %281%29.png" />
+    <None Include="Resources\icons8-guide-32 %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

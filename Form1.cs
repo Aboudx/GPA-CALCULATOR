@@ -24,8 +24,8 @@ namespace GPA_CALCULATOR
         public enum enStateTargtCGPA : byte
         {
             Achivable = 1,
-            IsAchivabled=2,
-            VerryDifficult=3,
+            IsAchivabled = 2,
+            VerryDifficult = 3,
             Impossible = 4
         }
 
@@ -147,6 +147,9 @@ namespace GPA_CALCULATOR
 
             pnlCheckTargetCGPA.Controls.Clear();
             pnlCheckTargetCGPA.Controls.Add(CGPA_Card);
+
+            ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "RCGPA may vary by ±0.02.");
+
         }
 
         private bool FocusInEmptyItem(Control control)
@@ -170,10 +173,10 @@ namespace GPA_CALCULATOR
 
             if (string.IsNullOrWhiteSpace(cbCreditHours.Text))
             {
-               return FocusInEmptyItem(cbCreditHours);
+                return FocusInEmptyItem(cbCreditHours);
             }
 
-               return false;
+            return false;
 
         }
 
@@ -182,7 +185,7 @@ namespace GPA_CALCULATOR
             if (string.IsNullOrWhiteSpace(tbCumuGPA.Text))
                 return FocusInEmptyItem(tbCumuGPA);
 
-            if(string.IsNullOrWhiteSpace(nudCompletedHours.Value.ToString()))
+            if (string.IsNullOrWhiteSpace(nudCompletedHours.Value.ToString()))
                 return FocusInEmptyItem(nudCompletedHours);
 
 
@@ -283,7 +286,7 @@ namespace GPA_CALCULATOR
         {
             double Points = 0;
 
-            foreach(stCourse C in lstCourses)
+            foreach (stCourse C in lstCourses)
             {
                 Points += (C.GradePoints * C.CreditHours);
             }
@@ -352,7 +355,7 @@ namespace GPA_CALCULATOR
                 return;
             }
 
-            if(CoursesIsFull())
+            if (CoursesIsFull())
             {
                 ShowNotiFication(Properties.Resources.icons8_error_48__1_, "Warning", "They cannot be more than 10");
                 return;
@@ -419,7 +422,7 @@ namespace GPA_CALCULATOR
 
             lstCourses[CourseIndex] = UptCard.Course;
 
-            UpdateStatistics();
+            CalculateGPA();
             ShowNotiFication(Properties.Resources.icons8_correct_64, "Success", "Updated Successfully.");
 
         }
@@ -439,7 +442,7 @@ namespace GPA_CALCULATOR
             _Student.SemesterTotalCourse--;
 
 
-            UpdateStatistics();
+            CalculateGPA();
             ShowNotiFication(Properties.Resources.icons8_error_50, "Completed", "Deleted Successfully.");
 
         }
@@ -557,8 +560,8 @@ namespace GPA_CALCULATOR
         private void SetTargetGPAData()
         {
             _Student._GPA.TotalGradePoints = CalculateTotalGradePoints();
-            _Student._GPA.ReqCumuGPAPoints= CalculateReqCumuGPAPoints();
-            _Student._GPA.ReqGPAPoints= CalculateReqGPAPoints();
+            _Student._GPA.ReqCumuGPAPoints = CalculateReqCumuGPAPoints();
+            _Student._GPA.ReqGPAPoints = CalculateReqGPAPoints();
             _Student._GPA.ReqGPA = CalculateReqGPA();
         }
 
@@ -574,7 +577,7 @@ namespace GPA_CALCULATOR
             SetIssentialInfo();
 
             _Student.TargetSemsterHours = Convert.ToByte(nudSemsHoursTCGPA.Value);
-            _Student._GPA.ReqCumuGPA=Convert.ToDouble(tbTargetCGPA.Text);
+            _Student._GPA.ReqCumuGPA = Convert.ToDouble(tbTargetCGPA.Text);
 
             SetTargetGPAData();
 
@@ -626,7 +629,7 @@ namespace GPA_CALCULATOR
 
             // Mode
             _CurrentMode = enMode.Normal;
-             ChangeButtonAndTittle();
+            ChangeButtonAndTittle();
 
             tbCourseBName.Focus();
         }
@@ -636,9 +639,9 @@ namespace GPA_CALCULATOR
             ResetInfo();
         }
 
-        private void picInfo_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
-            frmAbout about= new frmAbout();
+            frmAbout about = new frmAbout();
             about.ShowDialog();
         }
 
@@ -646,7 +649,7 @@ namespace GPA_CALCULATOR
         {
             pnlNotification.Controls.Clear();
             pnlNotification.Visible = false;
-            
+
         }
         private void tbCumuGPA_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -696,7 +699,7 @@ namespace GPA_CALCULATOR
 
         private void tbGrade_TextChanged(object sender, EventArgs e)
         {
-            if(int.TryParse(tbGrade.Text,out int Grade))
+            if (int.TryParse(tbGrade.Text, out int Grade))
             {
                 if (Grade > 100)
                 {
@@ -734,6 +737,12 @@ namespace GPA_CALCULATOR
                         " between 0 and 24");
                 }
             }
+        }
+
+        private void btnGuide_Click(object sender, EventArgs e)
+        {
+            frmGuide Guide=new frmGuide();
+            Guide.ShowDialog();
         }
     }
 }
