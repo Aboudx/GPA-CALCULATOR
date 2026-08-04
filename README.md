@@ -31,18 +31,28 @@ By simply entering their completed hours, current CGPA, and semester courses, st
 The project was created not only as a programming exercise, but as a practical tool intended to benefit my fellow university students.
 ---
 
-```markdown
-# Download
-Download the latest version here:
+---
 
-👉 https://github.com/Aboudx/GPA-CALCULATOR/releases/latest
+## 📥 Download
+
+Get the latest stable version of UOK GPA Calculator.
+
+### 🚀 Quick Download
+👉 [Download UOK_GPA_Setup.exe](https://github.com/Aboudx/GPA-CALCULATOR/releases/latest/download/UOK_GPA_setup.exe)
+
+### 🔗 Direct Download Link (Copy)
+```text
+https://github.com/Aboudx/GPA-CALCULATOR/releases/latest/download/UOK_GPA_setup.exe
 ```
+> If the download doesn't start automatically, visit the Releases page and download UOK_GPA_setup.exe manually.
+
+---
 
 # ✨ Features
 
 ## 📚 Semester GPA Calculator
 
-- Add unlimited courses
+- Add 10 courses Maximum
 - Edit existing courses
 - Delete courses
 - Automatic letter grade conversion
@@ -154,7 +164,6 @@ Main Form
 
 This project significantly improved my understanding of:
 
-- Object-Oriented Programming (OOP)
 - Windows Forms Development
 - User Controls
 - Delegates & Events
