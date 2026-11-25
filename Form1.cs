@@ -702,8 +702,8 @@ namespace GPA_CALCULATOR
                 {
                     tb.Text = "4.00";
                     tb.SelectionStart = tb.Text.Length;
-                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
-                        " between 0.00 and 4.00");
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be Keyboard (EN)\n\t" +
+                        "and between 0.00 and 4.00");
                 }
             }
         }
@@ -729,8 +729,8 @@ namespace GPA_CALCULATOR
                 {
                     tbGrade.Text = "100";
                     tbGrade.SelectionStart = tbGrade.Text.Length;
-                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
-                        " between 0 and 100");
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be Keyboard (EN)\n\t" +
+                        "and between 0 and 100");
                 }
             }
         }
@@ -743,8 +743,8 @@ namespace GPA_CALCULATOR
                 {
                     tbGrade.Text = "350";
                     tbGrade.SelectionStart = tbGrade.Text.Length;
-                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
-                        " between 0 and 350");
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be Keyboard (EN)\n\t" +
+                    "and between 0 and 350");
                 }
             }
         }
@@ -757,8 +757,8 @@ namespace GPA_CALCULATOR
                 {
                     tbGrade.Text = "100";
                     tbGrade.SelectionStart = tbGrade.Text.Length;
-                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be\n\t" +
-                        " between 0 and 24");
+                    ShowNotiFication(Properties.Resources.icons8_error_50, "Note", "it should be Keyboard (EN)\n\t" +
+                                       "and between 0 and 24");
                 }
             }
         }

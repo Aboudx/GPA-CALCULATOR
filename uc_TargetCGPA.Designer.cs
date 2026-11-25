@@ -33,6 +33,7 @@
             this.lbCheckCGPA1 = new System.Windows.Forms.Label();
             this.lbCheckCGPA3 = new System.Windows.Forms.Label();
             this.pnlCheckTargetCGPA = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.ToolTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.pnlCheckTargetCGPA.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.lbTargetGPA.Size = new System.Drawing.Size(170, 41);
             this.lbTargetGPA.TabIndex = 42;
             this.lbTargetGPA.Text = "                   ";
+            this.ToolTip.SetToolTip(this.lbTargetGPA, "المستهدف التراكمي المعدل إلى للوصول بدقة المطلوب الفصلي المعدل هو هذا");
             // 
             // lbCheckCGPA1
             // 
@@ -99,6 +101,14 @@
             this.pnlCheckTargetCGPA.ShadowShift = 2;
             this.pnlCheckTargetCGPA.Size = new System.Drawing.Size(287, 125);
             this.pnlCheckTargetCGPA.TabIndex = 41;
+            this.ToolTip.SetToolTip(this.pnlCheckTargetCGPA, "المستهدف التراكمي المعدل إلى للوصول بدقة المطلوب الفصلي المعدل هو هذا");
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.AllowLinksHandling = true;
+            this.ToolTip.BackColor = System.Drawing.Color.Transparent;
+            this.ToolTip.MaximumSize = new System.Drawing.Size(0, 0);
+            this.ToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // uc_TargetCGPA
             // 
@@ -120,5 +130,6 @@
         private System.Windows.Forms.Label lbCheckCGPA1;
         private System.Windows.Forms.Label lbCheckCGPA3;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlCheckTargetCGPA;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip ToolTip;
     }
 }
