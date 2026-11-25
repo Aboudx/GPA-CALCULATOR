@@ -54,6 +54,7 @@ namespace GPA_CALCULATOR
             public stGPA _GPA;
             public int CompletedHours;
             public byte ThisSemesterHours;
+            public byte PassedSemesterHours;
             public byte SemesterTotalCourse;
             public byte TargetSemsterHours;
         }
@@ -89,6 +90,8 @@ namespace GPA_CALCULATOR
             _Student.SemesterTotalCourse = 0;
             _Student.ThisSemesterHours = 0;
 
+            _Student.PassedSemesterHours = 0;
+
             pnlCheckTargetCGPA.Controls.Clear();
             pnlNotification.Controls.Clear();
 
@@ -121,6 +124,8 @@ namespace GPA_CALCULATOR
             pnlNotification.Visible = true;
 
         }
+
+
         private void UpdateStatistics()
         {
 
@@ -129,7 +134,9 @@ namespace GPA_CALCULATOR
 
             lbSemesterGPA.Text = _Student._GPA.SemesterGPA.ToString("F2");
             lbCumuGPA.Text = _Student._GPA.NewCumuGPA.ToString("F2");
-            lbTotalHours.Text = _Student.CompletedHours.ToString();
+
+            lbTotalHours.Text =
+              (_Student.CompletedHours + _Student.PassedSemesterHours).ToString();
 
             if (flbCourseList.Controls.Count <= 1)//1 => Because Position (1) Have Constant Value.
             {
@@ -536,6 +543,21 @@ namespace GPA_CALCULATOR
             _Student.CompletedHours = Convert.ToByte(nudCompletedHours.Value);
         }
 
+        private byte CalculatePassedSemesterHours()
+        {
+            _Student.PassedSemesterHours = 0;
+
+            foreach (stCourse C in lstCourses)
+            {
+                if (C.Grade >= 50)
+                {
+                    _Student.PassedSemesterHours += C.CreditHours;
+                }
+            }
+
+            return _Student.PassedSemesterHours;
+        }
+
         private void CalculateGPA()
         {
             if (IsStudentInfoInComplete())
@@ -547,6 +569,8 @@ namespace GPA_CALCULATOR
             SetIssentialInfo();
 
             SetGPAData();
+
+            CalculatePassedSemesterHours();
 
             UpdateStatistics();
 
@@ -741,7 +765,7 @@ namespace GPA_CALCULATOR
 
         private void btnGuide_Click(object sender, EventArgs e)
         {
-            frmGuide Guide=new frmGuide();
+            frmGuide Guide = new frmGuide();
             Guide.ShowDialog();
         }
     }

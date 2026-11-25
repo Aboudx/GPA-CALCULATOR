@@ -131,11 +131,13 @@
             this.ClientSize = new System.Drawing.Size(992, 571);
             this.Controls.Add(this.tbLaungunge);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGuide";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quick Guide User";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tbLaungunge.ResumeLayout(false);
             this.tpArabic.ResumeLayout(false);
             this.tbEnglish.ResumeLayout(false);

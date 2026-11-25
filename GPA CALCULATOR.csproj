@@ -328,6 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GPA Calc Icon.ico" />
+    <None Include="Resources\icons8-question-642.png" />
     <None Include="Resources\English Guide Final.png" />
     <None Include="Resources\Ararbic Guide.png" />
     <None Include="Resources\English Guide.png" />
