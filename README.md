@@ -33,20 +33,24 @@ The project was created not only as a programming exercise, but as a practical t
 
 ---
 
-## 📥 Download
+📥 Download
 
-Get the latest stable version of UOK GPA Calculator.
+Get the latest stable version of GPA Calculator.
 
-### 🚀 Quick Download
-👉 [Download UOK_GPA_Setup.exe](https://github.com/Aboudx/GPA-CALCULATOR/releases/latest/download/UOK_GPA_setup.exe)
+🚀 Quick Download
 
-### 🔗 Direct Download Link (Copy)
+👉 "Download GPA-CALCULATOR-Setup.exe" (https://github.com/Aboudx/GPA-CALCULATOR/releases/download/V1.1.0/GPA-CALCULATOR-Setup.exe)
+
+🔗 Direct Download Link (Copy)
+
 ```text
-https://github.com/Aboudx/GPA-CALCULATOR/releases/latest/download/UOK_GPA_setup.exe
+https://github.com/Aboudx/GPA-CALCULATOR/releases/download/V1.1.0/GPA-CALCULATOR-Setup.exe
 ```
-> If the download doesn't start automatically, visit the Releases page and download UOK_GPA_setup.exe manually.
+
+«If the download doesn't start automatically, visit the "Releases Page" (https://github.com/Aboudx/GPA-CALCULATOR/releases) and download GPA-CALCULATOR-Setup.exe manually.»
 
 ---
+
 
 # ✨ Features
 
